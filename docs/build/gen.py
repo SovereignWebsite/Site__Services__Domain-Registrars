@@ -121,6 +121,8 @@ SCHEMA = {
 DATA_COUNT = len(C.REGS)
 
 def main():
+    import lib
+    lib.LIVE_KEY = live
     # live pages
     allp = pages_for('', live)
     for path, h in allp.items(): write(path, h)

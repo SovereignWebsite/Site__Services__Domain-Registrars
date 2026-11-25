@@ -112,6 +112,23 @@ FAMILY = '''<details class="family-credit">
 </details>
 '''
 
+DESIGN_NAMES = [('d1', 'Ledger'), ('d2', 'Terminal'), ('d3', 'Atlas'), ('d4', 'Field Notes'), ('d5', 'Dashboard')]
+LIVE_KEY = 'd5'   # set by gen.py from designs.LIVE_DESIGN
+
+def picker_html(path, base):
+    """The 'Choose a design' strip with a thumbnail of each design, at the top of every page while designs are open.
+    On a live page a thumbnail opens that design's home; inside a preview it opens the same page in the other design."""
+    if path == '/designs/': return ''
+    cur = base.split('/')[-1] if base else LIVE_KEY
+    items = []
+    for k, n in DESIGN_NAMES:
+        href = f'/designs/{k}{path}' if (base and path != '/data/') else f'/designs/{k}/'
+        flag = ' <span class="rec">live</span>' if k == LIVE_KEY else ''
+        now = ' aria-current="true"' if k == cur else ''
+        items.append(f'<li><a href="{href}"{now}><img src="/assets/designs/thumbs/{k}.jpg" width="128" height="80" alt="Preview of design {k}, {esc(n)}"><span class="pn">{k} {esc(n)}{flag}</span></a></li>')
+    return (f'<aside class="picker" aria-label="Choose a design"><p class="pt"><strong>Choose a design.</strong> <span class="pt-long">Designs are open for a pick: open one to see this site in it. </span><a href="/designs/">How to choose</a></p>'
+            f'<div class="pscroll" tabindex="0" role="region" aria-label="Design previews"><ul>{"".join(items)}</ul></div></aside>\n')
+
 NAV = [('how-it-works', 'How it works'), ('buy-direct', 'Buy direct?'), ('aftermarket', 'Brokers and aftermarket'),
        ('transfers', 'Transfers and renewals'), ('registrars', 'Registrars with APIs'), ('choosing', 'Choosing for customers'),
        ('sources', 'Sources'), ('designs', 'Designs')]
@@ -133,7 +150,7 @@ def page(title, desc, path, body, base='', theme='d1', banner='', noindex=False,
   <details class="menu narrow"><summary>Sections</summary><nav aria-label="Sections, small screens"><ul>{nav}</ul></nav></details>
 </header>
 <main id="main">
-{banner}{body}
+{picker_html(path, base)}{banner}{body}
 </main>
 <footer class="foot">
 <nav class="site-links" aria-label="About this site">

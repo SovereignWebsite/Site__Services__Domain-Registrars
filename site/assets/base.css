@@ -107,3 +107,15 @@ main a,main li,main td,main th,main p,main dd,main summary,main h1,main h2{overf
 .scroll table.kv{table-layout:auto;width:100%}
 main{min-width:0}.wrap{min-width:0}
 @media (max-width:48rem){.bn-long{display:none}.banner{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+/* Choose a design: at the top of every page while designs are open */
+.picker{margin:0 0 1rem;padding:.6rem .8rem .7rem;border:1px solid var(--accent);border-radius:var(--radius);background:var(--note-bg)}
+.picker .pt{margin:0 0 .5rem;font-size:.9rem}
+.pscroll{overflow-x:auto}
+.pscroll ul{list-style:none;margin:0;padding:0;display:flex;gap:.7rem;min-width:min-content}
+.pscroll a{display:block;width:128px;text-decoration:none;color:var(--fg);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--bg)}
+.pscroll a[aria-current]{outline:3px solid var(--accent);outline-offset:1px}
+.pscroll img{display:block;width:128px;height:80px;object-fit:cover;object-position:top left}
+.pscroll .pn{display:block;padding:.2rem .4rem;font-size:.75rem;font-weight:700;color:var(--link);line-height:1.3}
+.pscroll .rec{margin-left:.2rem;font-size:.65rem}
+@media (min-width:48rem){.pscroll ul{flex-wrap:wrap}.pscroll a{width:150px}.pscroll img{width:150px;height:94px}}
+@media (max-width:48rem){.picker .pt-long{display:none}.picker{padding:.5rem .6rem .6rem}.picker .pt{margin-bottom:.4rem}}
