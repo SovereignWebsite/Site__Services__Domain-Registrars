@@ -1,7 +1,7 @@
 """The five design directions, their review rounds, and the picker page."""
 from lib import esc
 
-LIVE_DESIGN = 'd1'
+LIVE_DESIGN = 'd5'
 
 DESIGNS = {
  'd1': dict(key='d1', name='Ledger', line='An editorial reference book: serif type, paper colours, ruled tables, one calm column.',
@@ -17,7 +17,15 @@ DESIGNS = {
 }
 
 # Review rounds: edited as the rounds happen. Each entry: (heading, paragraphs).
-ROUNDS = []
+ROUNDS = [
+ ('Round 2 (25 Nov 2026): recommendation d5 Dashboard, with d4\'s margin sources', [
+  'The review of round 1 came from a.design, account A\'s design reviewer. It recommended d5, because the comparison is what readers come back for, with d4\'s margin sources on wide screens. After the changes below, the keeper agrees, and the live pages now use d5. d1 was the keeper\'s provisional pick in round 1.',
+  'Changed for every design: on a phone the long title becomes a short name and eight links become one Sections button; the web address kicker is gone; the first column of every table stays in view and a cue says the table scrolls sideways; the notes about reading prices are folded under one line instead of standing before the table.',
+  'Changed per design: d1 and d4 are no longer twins on a phone (d4 sources become boxed notes, d1 keeps quiet italic lines); d3 gets a bar of sections fixed to the bottom of a phone; d5 now truly leads with the comparison and gains d4\'s margin sources on wide screens; d2 is kept as the developer option and is the hardest for newcomers.',
+  'Still open: design.b was also asked for a review through a.maestro and has not answered yet. Dinis Cruz picks.']),
+ ('Round 1 (25 Nov 2026): five directions', [
+  'd1 Ledger, d2 Terminal, d3 Atlas, d4 Field Notes and d5 Dashboard, built from the same pages and sources. The keeper\'s provisional pick was d1. a.design found, worst first: the five were one layout on a phone; the comparison table hid .uk, .eu and .pt off screen with no cue; three notes stood before the table; d1 and d4 were near twins on a phone; d3\'s sidebar existed only on desktop; d2 is hardest for newcomers.']),
+]
 
 def picker_body(live):
     items = ''.join(f'<li><a href="/designs/{k}/"><img src="/assets/designs/thumbs/{k}.jpg" width="640" height="400" alt="Thumbnail of design {k}, {esc(d["name"])}: the home page">'

@@ -15,3 +15,11 @@ body.theme-d3 h1{color:var(--accent)}
 body.theme-d3 h2{padding-left:.7rem;border-left:5px solid var(--accent)}
 body.theme-d3 a.card{box-shadow:0 1px 0 var(--line);border-top:5px solid var(--accent)}
 body.theme-d3 .scroll{border-radius:var(--radius)}
+@media (max-width:61.99rem){
+ /* Atlas on a phone: a bar of sections fixed to the bottom, like a map legend */
+ body.theme-d3{padding-bottom:3.6rem}
+ body.theme-d3 .menu{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--bg);border-top:3px solid var(--accent)}
+ body.theme-d3 .menu summary{display:block;border:0;border-radius:0;text-align:center;padding:.8rem;color:var(--accent);font-size:1rem}
+ body.theme-d3 .menu summary::before{content:"\2630  "}
+ body.theme-d3 .menu ul{position:absolute;bottom:100%;left:0;right:0;margin:0;border-radius:var(--radius) var(--radius) 0 0;max-height:70vh;overflow:auto}
+}

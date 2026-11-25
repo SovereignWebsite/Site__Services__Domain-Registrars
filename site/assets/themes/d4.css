@@ -12,3 +12,9 @@ body.theme-d4 .wrap{background-image:linear-gradient(to right,transparent 0,tran
  body.theme-d4 .scroll{max-width:none}
 }
 body.theme-d4 .scroll{border-color:var(--line);background:rgba(255,255,255,.18)}
+@media (max-width:79.99rem){
+ /* Field Notes on a phone: each source becomes a boxed margin note under its claim */
+ body.theme-d4 .src{background:var(--card);border-left:4px solid var(--accent);padding:.4rem .6rem;margin:.4rem 0 .8rem;border-radius:0 6px 6px 0;font-size:.82rem}
+ body.theme-d4 .src::before{content:"Note on the source. ";font-weight:700;color:var(--accent)}
+ body.theme-d4 td .src,body.theme-d4 li .src{margin-left:0}
+}

@@ -118,15 +118,19 @@ NAV = [('how-it-works', 'How it works'), ('buy-direct', 'Buy direct?'), ('afterm
 
 def page(title, desc, path, body, base='', theme='d1', banner='', noindex=False, active=None):
     """path: the live path, e.g. '/how-it-works/'. base: '' live, '/designs/d2' for a preview."""
-    nav = ''.join(f'<li><a href="{base}/{k}/"{" aria-current=\"page\"" if active == k else ""}>{esc(t)}</a></li>'
-                  if k != 'designs' else f'<li><a href="/designs/"{" aria-current=\"page\"" if active == "designs" else ""}>{esc(t)}</a></li>'
-                  for k, t in NAV)
+    items = []
+    for k, t in NAV:
+        href = '/designs/' if k == 'designs' else f'{base}/{k}/'
+        cur = ' aria-current="page"' if active == k else ''
+        items.append(f'<li><a href="{href}"{cur}>{esc(t)}</a></li>')
+    nav = ''.join(items)
     return head(title, desc, path, base, theme, noindex or bool(base)) + f'''<body class="theme-{theme}">
 <a class="skip" href="#main">Skip to content</a>
 {FAMILY}<div class="wrap">
 <header class="top">
-  <a class="name" href="{base or ''}/">{esc(SITE_NAME)}</a>
-  <nav class="main-nav" aria-label="Sections"><ul>{nav}</ul></nav>
+  <a class="name" href="{base or ''}/"><span class="long">{esc(SITE_NAME)}</span><span class="short">Domain registrars</span></a>
+  <nav class="main-nav wide" aria-label="Sections"><ul>{nav}</ul></nav>
+  <details class="menu narrow"><summary>Sections</summary><nav aria-label="Sections, small screens"><ul>{nav}</ul></nav></details>
 </header>
 <main id="main">
 {banner}{body}

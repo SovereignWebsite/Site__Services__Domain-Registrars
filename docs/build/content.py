@@ -39,7 +39,7 @@ def home(base):
     ]
     cs = ''.join(f'<li><a class="card" href="{b}/{k}/"><span class="ct">{esc(t)}</span><span class="cd">{esc(d)}</span></a></li>' for k, t, d in cards)
     matrix = matrix_table(core_only=True, base=b)
-    return f'''{h1('Registering domains: how it works, and who has an API', 'domain-registrars.services.sovereignweb.site')}
+    return f'''{h1('Registering domains: how it works, and who has an API')}
 {lead('A researched guide for anyone registering domains on behalf of customers: how the system fits together, whether you can buy direct, what to do when a name is taken, and which registrars offer an API. Every claim has its source and the date it was checked.')}
 <ul class="cards">{cs}</ul>
 <section aria-labelledby="short"><h2 id="short">Short answers</h2>

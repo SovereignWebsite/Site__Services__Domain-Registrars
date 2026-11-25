@@ -9,3 +9,8 @@ body.theme-d1 th,body.theme-d1 td{border-top:1px solid var(--line)}
 body.theme-d1 thead th{background:transparent;border-top:0;border-bottom:1px solid var(--fg)}
 body.theme-d1 a.card{background:transparent;border:0;border-top:1px solid var(--fg);border-radius:0;padding:.6rem 0}
 body.theme-d1 .ours,body.theme-d1 .gap{border-radius:0}
+@media (max-width:48rem){
+ /* Ledger on a phone: plain text, sources as a quiet line, ruled sections */
+ body.theme-d1 .src{font-style:italic;border-top:1px solid var(--line);padding-top:.15rem}
+ body.theme-d1 h2{font-size:1.1rem}
+}

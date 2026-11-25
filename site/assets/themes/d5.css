@@ -17,4 +17,13 @@ body.theme-d5 table{font-size:.82rem}
 body.theme-d5 th,body.theme-d5 td{padding:.35rem .55rem}
 body.theme-d5 ul.cards{grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.5rem}
 body.theme-d5 a.card{padding:.55rem .7rem}
-body.theme-d5 p,body.theme-d5 ul,body.theme-d5 ol,body.theme-d5 dl{max-width:60rem}
+body.theme-d5 main>p,body.theme-d5 main>ul:not(.cards),body.theme-d5 main>ol,body.theme-d5 main>dl{max-width:60rem}
+@media (min-width:84rem){
+ /* Dashboard on a wide screen: tables run full width, prose keeps a readable column with its sources in the margin (from d4) */
+ body.theme-d5 main>p,body.theme-d5 main>ul,body.theme-d5 main>ol,body.theme-d5 main>dl,body.theme-d5 main>section>p,body.theme-d5 main>section>dl{max-width:46rem}
+ body.theme-d5 main>p,body.theme-d5 main>ul>li,body.theme-d5 main>ol>li,body.theme-d5 main>section dd,body.theme-d5 main>section>p{position:relative}
+ body.theme-d5 main>p>.src,body.theme-d5 main>ul>li>.src,body.theme-d5 main>ol>li>.src,body.theme-d5 main>section dd>.src,body.theme-d5 main>section>p>.src{position:absolute;left:calc(100% + 1.6rem);top:.2rem;width:18rem;border-left:3px solid var(--accent);padding-left:.7rem;margin:0;font-size:.78rem}
+ body.theme-d5 main>ul.cards{max-width:none}
+}
+body.theme-d5 main>.banner{order:-1;max-width:none}
+@media (max-width:48rem){body.theme-d5 .lead{font-size:1rem}body.theme-d5 main>.mark{display:none}}

@@ -79,3 +79,27 @@ details{margin:.2rem 0}summary{cursor:pointer;color:var(--link)}details p{margin
 @media (max-width:599px){.foot,.family-credit,.site-links,.small,.src{font-size:15px}table{font-size:.85rem}}
 table.kv td{min-width:0;overflow-wrap:anywhere}
 .badge{display:inline-block;margin:.15rem 0;padding:0 .45rem;border:1px solid var(--part-fg);border-radius:4px;background:var(--part-bg);color:var(--part-fg);font-size:.72rem;font-weight:700;line-height:1.5}
+/* Round 2: small screens. One Sections button, short name, sticky first column, a cue that tables scroll. */
+.menu,.short{display:none}
+.hint{display:none;font-size:.85rem;color:var(--muted);margin:.3rem 0}
+tbody th{position:sticky;left:0;background:var(--bg);z-index:1;border-right:1px solid var(--line)}
+table.kv tbody th{background:var(--card)}
+@media (max-width:48rem){
+ .main-nav.wide{display:none}
+ .menu{display:block}
+ .short{display:inline}.long{display:none}
+ header.top{padding:2.2rem 0 .4rem}
+ header.top .name{margin-bottom:.3rem}
+ .menu summary{display:inline-block;padding:.35rem .9rem;border:1px solid var(--accent);border-radius:999px;font-weight:700;color:var(--link);min-height:24px}
+ .menu ul{list-style:none;margin:.5rem 0 0;padding:.3rem 0;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
+ .menu li a{display:block;padding:.55rem .9rem;font-weight:600;text-decoration:none;min-height:24px}
+ .hint{display:block}
+ h1{font-size:clamp(1.7rem,8vw,2.2rem)}
+ .banner{font-size:.8rem;padding:.4rem .6rem}
+ th,td{padding:.45rem .55rem}
+ td{min-width:8rem}
+ tbody th{min-width:6.5rem;font-size:.85rem}
+ .scroll{box-shadow:inset -14px 0 10px -12px rgba(0,0,0,.35)}
+ table#none{}
+}
+details.readme{margin:.6rem 0;padding:.5rem .8rem;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}

@@ -38,20 +38,22 @@ def registrars_page(base):
     sec = table('Privacy, DNSSEC, account security, and bulk or reseller options',
       ['Registrar', 'WHOIS privacy', 'DNSSEC', 'Account security (2FA, lock)', 'Bulk and reseller'],
       [[td(name(r), True)] + [td(cell_claim(r[k], 90) + B(r, k)) for k in ('whois_privacy', 'dnssec', 'account_security', 'bulk_reseller')] for r in REGS])
+    hint = '<p class="hint">Swipe the table sideways to see more columns. The registrar name stays in view.</p>'
     return f'''{h1('Registrars with APIs')}
 {lead(f'{len(REGS)} registrars, read from their own public pages on {CHECKED}. Every cell is either sourced (with a link) or says <em>not stated</em>. No account was opened, nothing was bought and no API call needing an account was made.')}
-<p class="small">Prices are shown exactly as each vendor displayed them on that date, in its currency, and may be promotional or exclude tax. They are strings, not converted. Click "how to read" for the note on each. Machine-readable: <a href="/data/registrars.json">registrars.json</a> (<a href="/data/">schema</a>).</p>
-<div class="ours"><strong>How to read the prices.</strong> Every price was checked on 25 Nov 2026 and is shown in the vendor's own currency. First year and renewal are different numbers, so compare both, and the transfer price too. VAT or sales tax is not included unless the cell says so. An empty cell means <em>not stated</em>, not free. Prices change, and many first-year prices are promotions: check the vendor before you buy.</div>
-{note('Pricing model, in a sentence: Cloudflare states it charges at cost; other vendors in the data show retail margin, volume tiers, or do not say. Compare renewal against first-year price, which often differs.')}
 <h2 id="glance">Coverage at a glance</h2>
-{matrix_table(False, base)}
-<h2 id="api">APIs</h2>{api}
-<h2 id="prices">Extensions and prices</h2>{tl}
-<h2 id="security">Privacy, security and resellers</h2>{sec}
+{hint}{matrix_table(False, base)}
+<h2 id="api">APIs</h2>{hint}{api}
+<h2 id="prices">Extensions and prices</h2><details class="readme"><summary><strong>How to read the prices, and the pricing model</strong></summary>
+<p>Every price was checked on 25 Nov 2026 and is shown in the vendor's own currency. First year and renewal are different numbers, so compare both, and the transfer price too. VAT or sales tax is not included unless the cell says so. An empty cell means <em>not stated</em>, not free. Prices change, and many first-year prices are promotions: check the vendor before you buy.</p>
+<p class="ours"><strong>Our reading, not a sourced fact.</strong> Cloudflare states it charges at cost; other vendors in the data show retail margin, volume tiers, or do not say. Compare renewal against first-year price, which often differs.</p></details>
+{hint}{tl}
+<h2 id="security">Privacy, security and resellers</h2>{hint}{sec}
 <h2>Confidence</h2>
 <ul><li>Namecheap's pages returned 403 to our fetcher, so its entry comes from search-result summaries of official pages and needs a manual re-check. The same applies to parts of Porkbun and Network Solutions.</li>
 <li>Route 53 and Cloudflare publish few prices on readable pages; their price cells are empty rather than guessed.</li>
 <li>Where two pages conflicted, the entry's page lists the flag.</li></ul>
+<p class="small">Prices are shown exactly as each vendor displayed them on that date, in its currency, and may be promotional or exclude tax. They are strings, not converted. Machine-readable: <a href="/data/registrars.json">registrars.json</a> (<a href="/data/">schema</a>).</p>
 '''
 
 def registrar_detail(r, base):
