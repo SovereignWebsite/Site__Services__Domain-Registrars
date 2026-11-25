@@ -7,7 +7,7 @@ body.theme-d5 header.top .name{margin:0;font-size:1rem}
 body.theme-d5 main{display:flex;flex-direction:column}
 body.theme-d5 main>*{order:5}
 body.theme-d5 main>.mark,body.theme-d5 main>h1,body.theme-d5 main>.lead{order:0;max-width:60rem}
-body.theme-d5 main>section#cmp{order:1}
+body.theme-d5 main>section.cmp{order:1}
 body.theme-d5 main>ul.cards{order:2}
 body.theme-d5 h1{font-size:1.7rem}
 body.theme-d5 .scroll{max-height:80vh;overflow:auto}

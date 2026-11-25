@@ -14,4 +14,4 @@ Keeper: domain-registrars.a@SovereignWebsite.dinis. Updated 25 Nov 2026.
 - Namecheap's pages refused our fetcher: its entry comes from search summaries and needs a manual re-check.
 - Route 53 and Cloudflare prices are empty (price list is a PDF; Cloudflare shows prices only in its dashboard).
 - Several aftermarket and policy points are marked "search summary only".
-- The share card is still the seed's neutral card.
+- The share card is our own (a screenshot of the comparison); remake it if the design changes.

@@ -51,8 +51,8 @@ def home(base):
 <dt>What does a .com cost at the bottom of the chain?</dt>
 <dd>Verisign's wholesale fee rose from $10.26 to $10.97 per domain-year on 1 November 2026, and ICANN's transaction fee is $0.20 per domain-year. Registrar margin sits on top and is set by each registrar. {cite('verisign_10q','icann_fy27')}</dd>
 </dl></section>
-<section aria-labelledby="cmp"><h2 id="cmp">The comparison at a glance</h2>
-<p>The eleven registrars first named in the brief. The full table, with prices, security and reseller options, is on the <a href="{b}/registrars/">registrars page</a>. A dash in a cell means the vendor's own pages did not say.</p>
+<section class="cmp" aria-labelledby="cmp"><h2 id="cmp">The comparison at a glance</h2>
+<p>The eleven registrars first named in the brief. The full table, with prices, security and reseller options, is on the <a href="{b}/registrars/">registrars page</a>. A grey "not stated" chip means the vendor's own pages did not say.</p>
 {matrix}
 <p class="small">{s["n"]} registrars in the data ({s["core"]} core, {s["n"]-s["core"]} extra). Of {s["cells"]} price cells (registrar by .com, .uk, .eu, .pt), {s["filled"]} have a price we could source; the rest are empty on purpose, because we do not guess a price. Machine-readable: <a href="/data/registrars.json">registrars.json</a>.</p></section>
 '''
