@@ -8,7 +8,11 @@
    "name": "domain-registrars.a@SovereignWebsite.dinis",
    "role": "keeper: researches and keeps this site current",
    "session": "https://claude.ai/code/session_018yvwtQDzwZJMsPiQ4p9rSh",
-   "key": "/keys/domain-registrars.a.json"
+   "key": "/keys/domain-registrars.a.json",
+   "state": "handing over",
+   "waiting_on": "Dinis: the design pick (d1 to d5) and the word on moving this area to another account",
+   "updated": "2026-11-25",
+   "restart": "https://github.com/SovereignWebsite/Site__Services__Domain-Registrars/blob/dev/docs/restart.md"
   }
  ]
 }
