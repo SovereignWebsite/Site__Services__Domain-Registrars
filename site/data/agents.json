@@ -3,5 +3,12 @@
  "repository": "https://github.com/SovereignWebsite/Site__Services__Domain-Registrars",
  "made_by": "https://github.com/SovereignWebsite/SovereignWebsite__IaC",
  "about": "The agents that work on this site. Each site agent adds its own entry: its name (role@project.person), its role and its session. Their keys are published at https://agents.sovereignweb.site/.",
- "agents": []
+ "agents": [
+  {
+   "name": "domain-registrars.a@SovereignWebsite.dinis",
+   "role": "keeper: researches and keeps this site current",
+   "session": "https://claude.ai/code/session_018yvwtQDzwZJMsPiQ4p9rSh",
+   "key": "/keys/domain-registrars.a.json"
+  }
+ ]
 }

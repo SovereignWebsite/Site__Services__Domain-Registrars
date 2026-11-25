@@ -9,6 +9,8 @@ This file is for AI agents and the people using them. The site is https://domain
 - Read the site's pages, starting at https://domain-registrars.services.sovereignweb.site/.
 - Answer from what the site says, with a link for each point. When the site does not say something, say so plainly; never fill the gap with a guess.
 - Do not change anything.
+- Pages: how it works (/how-it-works/), can you buy direct (/buy-direct/), brokers and the aftermarket (/aftermarket/), transfers and renewals (/transfers/), registrars with APIs (/registrars/), choosing for customers (/choosing/), sources (/sources/), design picker (/designs/).
+- The comparison as data: /data/registrars.json, with its schema at /data/registrars.schema.json and explained at /data/. A null value means not stated: it could not be sourced from the vendor's own pages. Prices carry their date and currency and change often; never quote one without its date.
 
 ## If you act for the site's owner
 

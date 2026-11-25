@@ -1,0 +1,11 @@
+/* d1 Ledger: an editorial reference book. Serif, paper, ruled tables, one calm column. */
+:root{--font:Georgia,"Iowan Old Style","Times New Roman",serif;--head:Georgia,"Iowan Old Style",serif;--sans:system-ui,-apple-system,"Segoe UI",sans-serif;--maxw:47rem;--fs:19px;--radius:2px}
+body.theme-d1 h1{font-weight:400;letter-spacing:-.01em}
+body.theme-d1 h2{font-weight:400;font-variant:small-caps;letter-spacing:.04em;border-bottom:1px solid var(--line);padding-bottom:.25rem}
+body.theme-d1 .main-nav,body.theme-d1 .src,body.theme-d1 table,body.theme-d1 .chip,body.theme-d1 .small,body.theme-d1 .foot{font-family:var(--sans)}
+body.theme-d1 .main-nav ul{border-top:1px solid var(--fg);border-bottom:1px solid var(--line);padding:.35rem 0}
+body.theme-d1 .scroll{border:0;border-top:2px solid var(--fg);border-bottom:2px solid var(--fg);border-radius:0}
+body.theme-d1 th,body.theme-d1 td{border-top:1px solid var(--line)}
+body.theme-d1 thead th{background:transparent;border-top:0;border-bottom:1px solid var(--fg)}
+body.theme-d1 a.card{background:transparent;border:0;border-top:1px solid var(--fg);border-radius:0;padding:.6rem 0}
+body.theme-d1 .ours,body.theme-d1 .gap{border-radius:0}

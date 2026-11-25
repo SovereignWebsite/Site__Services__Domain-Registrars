@@ -1,0 +1,15 @@
+/* d2 Terminal: for people who live in a shell. Monospace, hard borders, prompts for headings. */
+:root{--font:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--head:var(--font);--maxw:56rem;--fs:16px;--radius:0;
+ --bg:#f3f6f3;--fg:#10190f;--muted:#3e4d3e;--accent:#0b5d1e;--link:#0b5d1e;--line:#9db39d;--card:#e6ede6;--note-bg:#e3eee3}
+@media (prefers-color-scheme:dark){:root{--bg:#0b100b;--fg:#d4f0d4;--muted:#9bbf9b;--accent:#6ee787;--link:#6ee787;--line:#2c4a2c;--card:#121a12;--note-bg:#102010;--gap-bg:#262308}}
+body.theme-d2 h1::before{content:"$ ";color:var(--accent)}
+body.theme-d2 h2::before{content:"## ";color:var(--accent)}
+body.theme-d2 h1{font-size:clamp(1.5rem,4vw,2.1rem);font-weight:700}
+body.theme-d2 h2{font-size:1.1rem}
+body.theme-d2 .main-nav ul{gap:.1rem .8rem}
+body.theme-d2 .main-nav li::before{content:"[";color:var(--muted)}body.theme-d2 .main-nav li::after{content:"]";color:var(--muted)}
+body.theme-d2 .main-nav li{display:inline-flex}
+body.theme-d2 .scroll,body.theme-d2 a.card,body.theme-d2 .banner{border-width:1px;border-style:solid}
+body.theme-d2 table{font-size:.82rem}
+body.theme-d2 .chip{border-radius:0;border:1px solid currentColor}
+body.theme-d2 .lead{color:var(--fg)}

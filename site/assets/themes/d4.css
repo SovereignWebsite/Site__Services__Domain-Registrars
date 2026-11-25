@@ -1,0 +1,14 @@
+/* d4 Field Notes: a researcher's notebook. Warm paper, sources set in the margin on wide screens. */
+:root{--font:"Charter","Bitstream Charter","Sitka Text",Cambria,serif;--head:"Charter","Bitstream Charter",Cambria,serif;--sans:system-ui,-apple-system,"Segoe UI",sans-serif;--maxw:68rem;--fs:18px;
+ --bg:#fdf6e3;--fg:#2b2418;--muted:#5c5240;--accent:#8a3b12;--link:#8a3b12;--line:#e0d4b5;--card:#f6ecd0;--note-bg:#f6ecd0;--gap-bg:#f3e4bd}
+@media (prefers-color-scheme:dark){:root{--bg:#1c1812;--fg:#efe6d2;--muted:#c0b497;--accent:#f0a574;--link:#f0a574;--line:#3d3526;--card:#26211a;--note-bg:#26211a;--gap-bg:#33290f}}
+body.theme-d4 .main-nav,body.theme-d4 table,body.theme-d4 .src,body.theme-d4 .chip,body.theme-d4 .small,body.theme-d4 .foot{font-family:var(--sans)}
+body.theme-d4 h1{font-style:italic;font-weight:400}
+body.theme-d4 .wrap{background-image:linear-gradient(to right,transparent 0,transparent calc(100% - 1px),transparent 100%)}
+@media (min-width:80rem){
+ body.theme-d4 main>p,body.theme-d4 main>ul,body.theme-d4 main>ol,body.theme-d4 main>dl,body.theme-d4 main>h2,body.theme-d4 main>h1,body.theme-d4 main>.lead,body.theme-d4 main>.ours,body.theme-d4 main>.gap,body.theme-d4 main>section>p,body.theme-d4 main>section>dl{max-width:42rem}
+ body.theme-d4 main>p,body.theme-d4 main>ul>li,body.theme-d4 main>ol>li,body.theme-d4 main>section dd,body.theme-d4 main>section>p{position:relative}
+ body.theme-d4 main>p>.src,body.theme-d4 main>ul>li>.src,body.theme-d4 main>ol>li>.src,body.theme-d4 main>section dd>.src,body.theme-d4 main>section>p>.src{position:absolute;left:calc(100% + 1.6rem);top:.2rem;width:17rem;border-left:3px solid var(--accent);padding-left:.7rem;margin:0;font-size:.78rem}
+ body.theme-d4 .scroll{max-width:none}
+}
+body.theme-d4 .scroll{border-color:var(--line);background:rgba(255,255,255,.18)}

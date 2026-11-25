@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gandi: Domain registrars: how buying a domain works, and the good options</title>
+<meta name="description" content="Gandi: API, extensions, prices, privacy and security, read from its own pages on 25 Nov 2026.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Domain registrars: how buying a domain works, and the good options">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://domain-registrars.services.sovereignweb.site/registrars/gandi/">
+<meta property="og:title" content="Gandi: Domain registrars: how buying a domain works, and the good options">
+<meta property="og:description" content="Gandi: API, extensions, prices, privacy and security, read from its own pages on 25 Nov 2026.">
+<meta property="og:image" content="https://domain-registrars.services.sovereignweb.site/assets/share/card-1200x630.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Domain registrars: how buying a domain works, and the good options">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gandi: Domain registrars: how buying a domain works, and the good options">
+<meta name="twitter:description" content="Gandi: API, extensions, prices, privacy and security, read from its own pages on 25 Nov 2026.">
+<meta name="twitter:image" content="https://domain-registrars.services.sovereignweb.site/assets/share/card-1200x630.jpg">
+<link rel="canonical" href="https://domain-registrars.services.sovereignweb.site/registrars/gandi/">
+<link rel="stylesheet" href="/assets/base.css">
+<link rel="stylesheet" href="/assets/themes/d3.css">
+</head>
+<body class="theme-d3">
+<a class="skip" href="#main">Skip to content</a>
+<details class="family-credit">
+  <summary>Sovereign Website</summary>
+  <ul>
+    <li><a href="/start/">Start here</a></li>
+    <li><a href="/agents/">Use with your AI</a></li>
+    <li class="family-gap"><a href="/admin/">How this site was made</a></li>
+    <li><a href="https://sovereignwebsite.ai/">Sovereign Website</a></li>
+    <li><a href="https://sovereignwebsite.org/">Principles</a></li>
+    <li><a href="https://sovereignwebsite.site/">Hosted</a></li>
+    <li><a href="https://hub.sovereignweb.site/">Hub</a></li>
+    <li><a href="https://agents.sovereignweb.site/">Agents</a></li>
+    <li><a href="https://vault.sovereignwebsite.site/">Vault</a></li>
+    <li><a href="https://agenticcells.ai/">AgentiCCells</a></li>
+    <li><a href="https://riskmandate.ai/">RiskMandate</a></li>
+    <li><a href="https://newsroom.sgit.ai/">Newsroom</a></li>
+  </ul>
+</details>
+<div class="wrap">
+<header class="top">
+  <a class="name" href="/designs/d3/">Domain registrars: how buying a domain works, and the good options</a>
+  <nav class="main-nav" aria-label="Sections"><ul><li><a href="/designs/d3/how-it-works/">How it works</a></li><li><a href="/designs/d3/buy-direct/">Buy direct?</a></li><li><a href="/designs/d3/aftermarket/">Brokers and aftermarket</a></li><li><a href="/designs/d3/transfers/">Transfers and renewals</a></li><li><a href="/designs/d3/registrars/" aria-current="page">Registrars with APIs</a></li><li><a href="/designs/d3/choosing/">Choosing for customers</a></li><li><a href="/designs/d3/sources/">Sources</a></li><li><a href="/designs/">Designs</a></li></ul></nav>
+</header>
+<main id="main">
+<p class="banner"><strong>Design preview d3: Atlas.</strong> The live pages use d1. <a href="/designs/">Back to the picker</a>.</p>
+<p><a href="/designs/d3/registrars/">All registrars</a></p><h1>Gandi</h1>
+<p class="lead">Read from Gandi's own public pages on 25 Nov 2026. <a class="hp" href="https://www.gandi.net/">https://www.gandi.net/</a></p>
+<h2>API</h2><div class="scroll" tabindex="0" role="region" aria-label="API details"><table class="kv"><caption>API details for Gandi</caption><tbody><tr><th scope="row">API</th><td>yes <a class="srclink" href="https://api.gandi.net/docs/domains/">source</a></td></tr><tr><th scope="row">Docs</th><td>https://api.gandi.net/docs/domains/ <a class="srclink" href="https://api.gandi.net/docs/domains/">source</a></td></tr><tr><th scope="row">Auth style</th><td>Authorization: Bearer personal access token (pat_...). Older Apikey scheme still works but is deprecated. <a class="srclink" href="https://api.gandi.net/docs/domains/">source</a></td></tr><tr><th scope="row">Sandbox</th><td>yes (separate sandbox account and key; base https://api.sandbox.gandi.net/v5/; only .com, .net, .org, .fr; transfer not available; Domain, LiveDNS, Billing, Organization, Mailbox APIs). Also a Dry-Run: 1 header on register. <a class="srclink" href="https://api.sandbox.gandi.net/docs/sandbox/">source</a></td></tr><tr><th scope="row">Register</th><td>yes (POST /v5/domain/domains; availability GET /v5/domain/check) <a class="srclink" href="https://api.gandi.net/docs/domains/">source</a></td></tr><tr><th scope="row">Transfer in</th><td>Reseller page says the API supports transfers; I did not see a transfer-in endpoint in the portions of the docs read. Availability check can price a transfer process. <a class="srclink" href="https://www.gandi.net/en/reseller">source</a></td></tr><tr><th scope="row">Renew</th><td>yes (renew path /v5/domain/domains/{domain}/renew per search extract; autorenew PATCH endpoint seen in docs) <a class="srclink" href="https://api.gandi.net/docs/domains/">source</a></td></tr><tr><th scope="row">Manage DNS</th><td>yes via the LiveDNS API (separate doc section) <a class="srclink" href="https://api.gandi.net/docs/domains/">source</a></td></tr><tr><th scope="row">Set nameservers</th><td>Set at registration; a dedicated update endpoint not confirmed in text read. Enabling LiveDNS applies LiveDNS nameservers via POST /v5/domain/domains/{domain}/livedns. <a class="srclink" href="https://api.gandi.net/docs/domains/">source</a></td></tr><tr><th scope="row">Other</th><td>DNSSEC key endpoints (dnskeys list/add/replace/delete) and LiveDNS DNSSEC activation endpoint. Rate limit 1000 requests per minute per IP (per sandbox guide). <a class="srclink" href="https://api.gandi.net/docs/domains/">source</a></td></tr></tbody></table></div>
+<h2>Extensions</h2><div class="scroll" tabindex="0" role="region" aria-label="Extension support"><table class="kv"><caption>Extension support for Gandi</caption><tbody><tr><th scope="row">.uk</th><td>yes (.uk and .co.uk) <span class="srclink">source (address no longer resolves, 404 on 25 Nov 2026; check by hand)</span><p>Open to anyone, no local presence stated. Personal data protected at registry level for .uk.</p></td></tr><tr><th scope="row">.eu</th><td>yes <a class="srclink" href="https://www.gandi.net/en/domain/tld/eu">source</a><p>Eligible: individuals residing in EU, Norway, Iceland, Liechtenstein; EU citizens; businesses based there. Auth code valid 40 days.</p></td></tr><tr><th scope="row">.pt</th><td>yes <a class="srclink" href="https://www.gandi.net/en/domain/tld/pt">source</a><p>Anyone can register. No accented names. Auth code valid 30 days, single use. Renew no later than 2 days before expiry. Owner change via customer service only. 30-day deletion quarantine.</p></td></tr></tbody></table></div>
+<h2>Prices</h2><div class="scroll" tabindex="0" role="region" aria-label="Prices"><table class="kv"><caption>Prices for Gandi, as displayed on 25 Nov 2026</caption><tbody><tr><th scope="row">.com</th><td><span class="pr">first year <b>EUR 11.65</b><br>renewal <b>EUR 31.98 (EUR 28.78 per year promo for 2 to 9 years)</b><br>transfer <b>EUR 11.65 (includes minimum renewal; 60 days minimum after registration)</b></span><br><span class="small">EUR ex VAT. Checked 2026-11-25.</span> <a class="srclink" href="https://www.gandi.net/en/domain/tld/com">source</a><details><summary>how to read</summary>Standard rate ex VAT as displayed for France. Includes free SSL certificate and LiveDNS with DNSSEC.</details></td></tr><tr><th scope="row">.uk</th><td><span class="pr">first year <b>EUR 8.60 (promo EUR 5.99 first year)</b><br>renewal <b>EUR 23.98 (EUR 21.58 promo for 2 to 9 years)</b><br>transfer <b>free, does not change expiry</b></span><br><span class="small">EUR ex VAT. Checked 2026-11-25.</span> <span class="srclink">source (address no longer resolves, 404 on 25 Nov 2026; check by hand)</span> <span class="srclink">source (address no longer resolves, 404 on 25 Nov 2026; check by hand)</span><details><summary>how to read</summary>The .uk page shows these figures; the .co.uk page shows identical figures.</details></td></tr><tr><th scope="row">.eu</th><td><span class="pr">first year <b>EUR 13.29 (promo EUR 3.99 first year)</b><br>renewal <b>EUR 30.00 (EUR 27.00 promo for 2 to 9 years)</b><br>transfer <b>EUR 13.29 (renews one year)</b></span><br><span class="small">EUR ex VAT. Checked 2026-11-25.</span> <a class="srclink" href="https://www.gandi.net/en/domain/tld/eu">source</a><details><summary>how to read</summary>Standard rate ex VAT; promo applies for one year only.</details></td></tr><tr><th scope="row">.pt</th><td><span class="pr">first year <b>EUR 17.38</b><br>renewal <b>EUR 30.00 (page also showed EUR 40.00 for a 1-year line, see flags)</b><br>transfer <b>free, does not change expiry</b></span><br><span class="small">EUR ex VAT. Checked 2026-11-25.</span> <a class="srclink" href="https://www.gandi.net/en/domain/tld/pt">source</a><details><summary>how to read</summary>Ex VAT as displayed for France.</details></td></tr></tbody></table></div>
+<ul><li>Shown in EUR for France, excluding VAT (20% option via selector). EUR, GBP and USD selectable. <a class="srclink" href="https://www.gandi.net/en/domain/tld/com">source</a></li></ul>
+<h2>Privacy, security and the rest</h2><div class="scroll" tabindex="0" role="region" aria-label="Other details"><table class="kv"><caption>Other details for Gandi</caption><tbody><tr><th scope="row">Pricing model</th><td>margin (published retail prices, with promotions; reseller volume discounts exist) <a class="srclink" href="https://www.gandi.net/en/domain/tld">source</a></td></tr><tr><th scope="row">WHOIS privacy</th><td>Free and on by default. For some extensions (.fr, .de, .uk, .nz, .ru) data is protected at registry level and Gandi shows registry-provided WHOIS; email anonymisation does not apply to some extensions including .uk. <a class="srclink" href="https://docs.gandi.net/en/domain_names/common_operations/whois_privacy.html">source</a></td></tr><tr><th scope="row">DNSSEC</th><td>Supported. With LiveDNS nameservers, activation is automatic from the Nameservers tab (&#x27;Go to DNSSEC&#x27;), including DS handling at the registry; with external nameservers you submit the public key manually. ALIAS record on the bare domain breaks DNSSEC. API also exposes dnskeys and LiveDNS DNSSEC activation. Docs pages are old; check live panel. <a class="srclink" href="https://docs.gandi.net/en/domain_names/advanced_users/dnssec.html">source</a></td></tr><tr><th scope="row">Account security</th><td><span class="ns">not stated</span></td></tr><tr><th scope="row">Bulk and reseller</th><td>Free reseller account, no commitment; API for domain creation, renewal, transfers, contacts and DNS; lower rates with higher sales volume (no figures published). Bulk transfer docs exist. <a class="srclink" href="https://www.gandi.net/en/reseller">source</a></td></tr><tr><th scope="row">Other notes</th><td>Some extensions require a Gandi Corporate Services subscription. Late renewal and restore fees are listed per TLD. Gandi is also the registrar associate behind some Route 53 domains. <a class="srclink" href="https://www.gandi.net/en/domain/tld">source</a></td></tr></tbody></table></div>
+<h2>Flags: conflicts or doubts</h2><ul><li>Gandi .pt page showed renewal &#x27;from EUR 30.00&#x27; but also EUR 40.00 for a 1-year line; I could not tell which applies to a single year.</li><li>The all-TLD price table page only covered .abogado to .az so individual TLD pages were used.</li><li>Transfer and nameserver-update endpoints were not visible in the parts of the API docs read; the reseller page nonetheless claims transfers via the API.</li><li>Gandi DNSSEC, 2FA docs carry old page metadata (several years); menu labels may differ.</li><li>Prices were displayed for France and may differ by country or currency selector.</li></ul>
+<h2>Pages read</h2><ul class="srcs"><li><a class="srclink" href="https://api.gandi.net/docs/domains/">https://api.gandi.net/docs/domains/</a></li><li><a class="srclink" href="https://api.sandbox.gandi.net/docs/sandbox/">https://api.sandbox.gandi.net/docs/sandbox/</a></li><li><a class="srclink" href="https://docs.gandi.net/en/account_management/security/totp.html">https://docs.gandi.net/en/account_management/security/totp.html</a></li><li><a class="srclink" href="https://docs.gandi.net/en/domain_names/advanced_users/dnssec.html">https://docs.gandi.net/en/domain_names/advanced_users/dnssec.html</a></li><li><a class="srclink" href="https://docs.gandi.net/en/domain_names/common_operations/whois_privacy.html">https://docs.gandi.net/en/domain_names/common_operations/whois_privacy.html</a></li><li><a class="srclink" href="https://docs.gandi.net/en/domain_names/transfer_out/transfer_lock.html">https://docs.gandi.net/en/domain_names/transfer_out/transfer_lock.html</a></li><li><a class="srclink" href="https://www.gandi.net/en/domain/tld">https://www.gandi.net/en/domain/tld</a></li><li><a class="srclink" href="https://www.gandi.net/en/domain/tld/com">https://www.gandi.net/en/domain/tld/com</a></li><li><a class="srclink" href="https://www.gandi.net/en/domain/tld/eu">https://www.gandi.net/en/domain/tld/eu</a></li><li><a class="srclink" href="https://www.gandi.net/en/domain/tld/pt">https://www.gandi.net/en/domain/tld/pt</a></li><li><span class="srclink">https://www.gandi.net/en/domain/tld/uk (address no longer resolves, 404 on 25 Nov 2026; check by hand)</span></li><li><span class="srclink">https://www.gandi.net/en/domain/tld/uk and https://www.gandi.net/en/domain/tld/co.uk (address no longer resolves, 404 on 25 Nov 2026; check by hand)</span> <span class="srclink">https://www.gandi.net/en/domain/tld/uk and https://www.gandi.net/en/domain/tld/co.uk (address no longer resolves, 404 on 25 Nov 2026; check by hand)</span></li><li><a class="srclink" href="https://www.gandi.net/en/reseller">https://www.gandi.net/en/reseller</a></li></ul>
+
+</main>
+<footer class="foot">
+<nav class="site-links" aria-label="About this site">
+  <a href="/start/">Start here</a>
+  <a href="/agents/">Use with your AI</a>
+  <a href="/admin/">How this site was made</a>
+  <a href="/policy/">How this site is governed</a>
+  <a href="/data/">Data and schema</a>
+</nav>
+<p>Everything here is sourced and dated, and prices change: check the vendor before you buy. No accounts were opened and nothing was bought to make this site. No cookies, no tracking, no affiliate links. A sovereign website, made with the <a href="https://sovereignwebsite.org/">open pattern</a>. Source: <a href="https://github.com/SovereignWebsite/Site__Services__Domain-Registrars">github.com/SovereignWebsite/Site__Services__Domain-Registrars</a>.</p>
+</footer>
+</div>
+</body>
+</html>

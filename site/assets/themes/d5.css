@@ -1,0 +1,20 @@
+/* d5 Dashboard: comparison first. Full width, compact, sticky headers, status chips. */
+:root{--maxw:none;--fs:16px;--radius:6px;--accent:#0a6b8a;--link:#075a75;--bg:#f4f6f8;--card:#e9eef2;--line:#ccd5dc;--note-bg:#e4f0f5}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1418;--fg:#e6edf1;--muted:#a9b8c1;--accent:#6cc4e0;--link:#7fcbe4;--card:#18222a;--line:#2a3944;--note-bg:#142630}}
+body.theme-d5 .wrap{max-width:none;padding:0 1.2rem}
+body.theme-d5 header.top{display:flex;flex-wrap:wrap;align-items:baseline;gap:.3rem 1.5rem;padding:1.6rem 0 .5rem;border-bottom:2px solid var(--accent)}
+body.theme-d5 header.top .name{margin:0;font-size:1rem}
+body.theme-d5 main{display:flex;flex-direction:column}
+body.theme-d5 main>*{order:5}
+body.theme-d5 main>.mark,body.theme-d5 main>h1,body.theme-d5 main>.lead{order:0;max-width:60rem}
+body.theme-d5 main>section#cmp{order:1}
+body.theme-d5 main>ul.cards{order:2}
+body.theme-d5 h1{font-size:1.7rem}
+body.theme-d5 .scroll{max-height:80vh;overflow:auto}
+body.theme-d5 thead th{position:sticky;top:0;z-index:2;box-shadow:0 1px 0 var(--line)}
+body.theme-d5 tbody th{position:sticky;left:0;background:var(--bg);z-index:1}
+body.theme-d5 table{font-size:.82rem}
+body.theme-d5 th,body.theme-d5 td{padding:.35rem .55rem}
+body.theme-d5 ul.cards{grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.5rem}
+body.theme-d5 a.card{padding:.55rem .7rem}
+body.theme-d5 p,body.theme-d5 ul,body.theme-d5 ol,body.theme-d5 dl{max-width:60rem}

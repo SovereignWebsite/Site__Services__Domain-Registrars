@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data and schema: Domain registrars: how buying a domain works, and the good options</title>
+<meta name="description" content="The registrars comparison as a JSON file with a documented schema.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Domain registrars: how buying a domain works, and the good options">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://domain-registrars.services.sovereignweb.site/data/">
+<meta property="og:title" content="Data and schema: Domain registrars: how buying a domain works, and the good options">
+<meta property="og:description" content="The registrars comparison as a JSON file with a documented schema.">
+<meta property="og:image" content="https://domain-registrars.services.sovereignweb.site/assets/share/card-1200x630.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Domain registrars: how buying a domain works, and the good options">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Data and schema: Domain registrars: how buying a domain works, and the good options">
+<meta name="twitter:description" content="The registrars comparison as a JSON file with a documented schema.">
+<meta name="twitter:image" content="https://domain-registrars.services.sovereignweb.site/assets/share/card-1200x630.jpg">
+<link rel="canonical" href="https://domain-registrars.services.sovereignweb.site/data/">
+<link rel="stylesheet" href="/assets/base.css">
+<link rel="stylesheet" href="/assets/themes/d1.css">
+</head>
+<body class="theme-d1">
+<a class="skip" href="#main">Skip to content</a>
+<details class="family-credit">
+  <summary>Sovereign Website</summary>
+  <ul>
+    <li><a href="/start/">Start here</a></li>
+    <li><a href="/agents/">Use with your AI</a></li>
+    <li class="family-gap"><a href="/admin/">How this site was made</a></li>
+    <li><a href="https://sovereignwebsite.ai/">Sovereign Website</a></li>
+    <li><a href="https://sovereignwebsite.org/">Principles</a></li>
+    <li><a href="https://sovereignwebsite.site/">Hosted</a></li>
+    <li><a href="https://hub.sovereignweb.site/">Hub</a></li>
+    <li><a href="https://agents.sovereignweb.site/">Agents</a></li>
+    <li><a href="https://vault.sovereignwebsite.site/">Vault</a></li>
+    <li><a href="https://agenticcells.ai/">AgentiCCells</a></li>
+    <li><a href="https://riskmandate.ai/">RiskMandate</a></li>
+    <li><a href="https://newsroom.sgit.ai/">Newsroom</a></li>
+  </ul>
+</details>
+<div class="wrap">
+<header class="top">
+  <a class="name" href="/">Domain registrars: how buying a domain works, and the good options</a>
+  <nav class="main-nav" aria-label="Sections"><ul><li><a href="/how-it-works/">How it works</a></li><li><a href="/buy-direct/">Buy direct?</a></li><li><a href="/aftermarket/">Brokers and aftermarket</a></li><li><a href="/transfers/">Transfers and renewals</a></li><li><a href="/registrars/">Registrars with APIs</a></li><li><a href="/choosing/">Choosing for customers</a></li><li><a href="/sources/">Sources</a></li><li><a href="/designs/">Designs</a></li></ul></nav>
+</header>
+<main id="main">
+<h1>Data and schema</h1>
+<p class="lead">The comparison tables are built from one file you can download and reuse.</p>
+<p><a href="/data/registrars.json">registrars.json</a> and its <a href="/data/registrars.schema.json">JSON Schema</a>. Checked 25 Nov 2026. 16 registrars.</p>
+<h2>How the file is shaped</h2>
+<ul>
+<li>Top level: <code>schema_version</code>, <code>title</code>, <code>checked</code>, <code>about</code> and <code>registrars</code> (a list).</li>
+<li>Every datum is a <strong>claim</strong>: <code>value</code> (text as the vendor showed it, or <code>null</code>), <code>source</code> (the vendor page it came from), <code>checked</code> (date) and <code>note</code>. A <code>null</code> value means <em>not stated</em>: it could not be sourced from the vendor's own public pages.</li>
+<li>Per registrar: <code>id</code>, <code>tier</code> (<code>core</code> or <code>extra</code>), <code>name</code>, <code>homepage</code>, <code>api</code> (<code>exists</code>, <code>docs_url</code>, <code>auth_style</code>, <code>sandbox</code>, <code>capabilities</code>, <code>other</code>), <code>tlds</code> (<code>uk</code>, <code>eu</code>, <code>pt</code>), <code>pricing_model</code>, <code>prices</code> (<code>com</code>, <code>uk</code>, <code>eu</code>, <code>pt</code>), <code>whois_privacy</code>, <code>dnssec</code>, <code>account_security</code>, <code>bulk_reseller</code>, <code>other_notes</code>, <code>unverified_flags</code> and <code>sources</code>.</li>
+<li>A price has <code>first_year</code>, <code>renewal</code>, <code>transfer</code> (strings as displayed), <code>currency</code>, <code>tax_inclusive</code> (true, false or null), <code>reading</code> (how to read it), <code>source</code> and <code>checked</code>. Prices are never converted or rounded, and may be promotional.</li>
+</ul>
+<h2>Rules</h2>
+<ul><li>Never invent a field: if the vendor's pages do not say, the value stays <code>null</code>.</li>
+<li>Prices change: each carries the date it was checked and its currency.</li>
+<li>The tables on this site are generated from this file by <code>docs/build/gen.py</code> in the repository.</li></ul>
+</main>
+<footer class="foot">
+<nav class="site-links" aria-label="About this site">
+  <a href="/start/">Start here</a>
+  <a href="/agents/">Use with your AI</a>
+  <a href="/admin/">How this site was made</a>
+  <a href="/policy/">How this site is governed</a>
+  <a href="/data/">Data and schema</a>
+</nav>
+<p>Everything here is sourced and dated, and prices change: check the vendor before you buy. No accounts were opened and nothing was bought to make this site. No cookies, no tracking, no affiliate links. A sovereign website, made with the <a href="https://sovereignwebsite.org/">open pattern</a>. Source: <a href="https://github.com/SovereignWebsite/Site__Services__Domain-Registrars">github.com/SovereignWebsite/Site__Services__Domain-Registrars</a>.</p>
+</footer>
+</div>
+</body>
+</html>

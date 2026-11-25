@@ -1,0 +1,3226 @@
+{
+ "schema_version": 1,
+ "title": "Domain registrars with APIs: comparison data",
+ "checked": "2026-11-25",
+ "keeper": "domain-registrars.a@SovereignWebsite.dinis",
+ "about": "Every datum is a claim: {value, source, checked, note}. value null means not stated: the field could not be sourced from the vendor's own public pages on the checked date. Prices are as the vendor displayed them on that date, in the vendor's currency, and may be promotional; they are strings so nothing is rounded or converted. Pages were read without opening any account.",
+ "registrars": [
+  {
+   "id": "cloudflare",
+   "tier": "core",
+   "name": {
+    "value": "Cloudflare Registrar",
+    "source": "https://www.cloudflare.com/products/registrar/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "homepage": {
+    "value": "https://www.cloudflare.com/products/registrar/",
+    "source": "https://www.cloudflare.com/products/registrar/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "api": {
+    "exists": {
+     "value": "limited",
+     "source": "https://developers.cloudflare.com/registrar/registrar-api/index.md",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "docs_url": {
+     "value": "https://developers.cloudflare.com/registrar/registrar-api/index.md",
+     "source": "https://developers.cloudflare.com/registrar/registrar-api/index.md",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "auth_style": {
+     "value": "Bearer API token in the Authorization header, token needs Registrar write permission; Cloudflare API v4 base URL. Prerequisites: account ID, billing profile with default payment method, default registrant contact, Domain Registration Agreement accepted in the dashboard.",
+     "source": "https://developers.cloudflare.com/registrar/registrar-api/index.md",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "sandbox": {
+     "value": "not stated",
+     "source": "https://developers.cloudflare.com/registrar/registrar-api/index.md",
+     "checked": "2026-11-25",
+     "note": "The Registrar API page does not mention a sandbox or test environment."
+    },
+    "capabilities": {
+     "can_register": {
+      "value": "yes (first beta; only a subset of extensions; Check returns extension_not_supported_via_api for others; successful registrations non-refundable)",
+      "source": "https://developers.cloudflare.com/registrar/registrar-api/index.md",
+      "checked": "2026-11-25",
+      "note": null
+     },
+     "can_transfer": {
+      "value": "no (not available through the API)",
+      "source": "https://developers.cloudflare.com/registrar/registrar-api/index.md",
+      "checked": "2026-11-25",
+      "note": null
+     },
+     "can_renew": {
+      "value": "no (\"Renewals are not yet available through the API\")",
+      "source": "https://developers.cloudflare.com/registrar/registrar-api/index.md",
+      "checked": "2026-11-25",
+      "note": null
+     },
+     "can_manage_dns": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated on the Registrar API page; DNS is a separate Cloudflare product and was not checked here"
+     },
+     "can_set_nameservers": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated; the page says contact updates are unavailable and does not describe post-registration settings"
+     }
+    },
+    "other": {
+     "value": "Search and Check endpoints exist (Check up to 20 domains per request, real-time availability and price). Register is billed to default payment method; auto-renew defaults off; privacy defaults to redaction where the TLD allows.",
+     "source": "https://developers.cloudflare.com/registrar/registrar-api/index.md",
+     "checked": "2026-11-25",
+     "note": null
+    }
+   },
+   "tlds": {
+    "uk": {
+     "value": "yes (.uk and .co.uk listed as supported; transfer docs cover .uk, co.uk, org.uk, me.uk). Whether .uk can be registered through the API was not stated.",
+     "source": "https://www.cloudflare.com/tld-policies/",
+     "checked": "2026-11-25",
+     "note": null,
+     "notes": "No UK presence requirement mentioned on the pages read. Transfer-in uses the Nominet IPS tag set to CLOUDFLARE, no auth code. Source for transfer: https://developers.cloudflare.com/registrar/top-level-domains/uk-domains/index.md"
+    },
+    "eu": {
+     "value": "not listed",
+     "source": "https://www.cloudflare.com/tld-policies/",
+     "checked": "2026-11-25",
+     "note": ".eu does not appear on the TLD policies page and is not described as coming soon. Treat as not supported until confirmed in the dashboard search.",
+     "notes": null
+    },
+    "pt": {
+     "value": "not listed",
+     "source": "https://www.cloudflare.com/tld-policies/",
+     "checked": "2026-11-25",
+     "note": ".pt does not appear on the TLD policies page and is not described as coming soon. Treat as not supported until confirmed.",
+     "notes": null
+    }
+   },
+   "pricing_model": {
+    "value": "at cost (no markup; registration, transfer and renewal at or below what registries and ICANN charge)",
+    "source": "https://www.cloudflare.com/products/registrar/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "prices": {
+    "com": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "No figures on the pages read; prices shown only in dashboard search."
+    },
+    "uk": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": "0 (no fee, no extra year)",
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": "https://developers.cloudflare.com/registrar/top-level-domains/uk-domains/index.md",
+     "checked": "2026-11-25",
+     "note": "No figures published on pages read. Transfer-in of .uk has no fee and adds no extra year, per https://developers.cloudflare.com/registrar/get-started/transfer-domain-to-cloudflare/index.md"
+    },
+    "eu": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not offered per pages read"
+    },
+    "pt": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not offered per pages read"
+    }
+   },
+   "price_notes": [],
+   "whois_privacy": {
+    "value": "Free personal-data redaction, 'if permitted by the registry'. Whether on by default is not stated on the WHOIS page; the overview says redacted WHOIS is offered by default. Registrant state/country stay visible.",
+    "source": "https://developers.cloudflare.com/registrar/account-options/whois-redaction/index.md",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "dnssec": {
+    "value": "Supported, free, one-click in dashboard. For domains delegated to Cloudflare, Cloudflare publishes CDS/CDNSKEY and Registrar scans them and submits DS to the registry automatically (1 to 2 days).",
+    "source": "https://developers.cloudflare.com/registrar/get-started/enable-dnssec/index.md",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "account_security": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "bulk_reseller": {
+    "value": null,
+    "source": "https://developers.cloudflare.com/registrar/get-started/transfer-domain-to-cloudflare/index.md",
+    "checked": "2026-11-25",
+    "note": "No reseller programme found on the pages read. Docs say bulk transfers follow the same process as single ones, each charged individually."
+   },
+   "other_notes": {
+    "value": "Transfer-in needs: domain at least 60 days old, no registrant change in 60 days, unlocked, DNSSEC disabled at old registrar, and Cloudflare must be the authoritative DNS (full setup); you cannot use another DNS provider while registered with Cloudflare. Transferred domains locked 60 days. Most gTLD transfers add one year; .uk adds none. Some registrars (Shopify, Block) block nameserver changes so need a workaround. Transfers into Cloudflare are by dashboard; API cannot transfer.",
+    "source": "https://developers.cloudflare.com/registrar/get-started/transfer-domain-to-cloudflare/index.md",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "access_note": null,
+   "unverified_flags": [
+    "Cloudflare overview page says over 430 TLDs; developer docs say over 400. Minor wording difference.",
+    "Docs TLD page defers to the TLD policies page; neither shows .eu or .pt, but absence is not an explicit statement of non-support.",
+    "WHOIS redaction doc does not say whether it is default; product overview says redacted WHOIS is offered by default.",
+    "Registrar API is a first beta and may change; per-TLD API support is a subset of dashboard support and not listed on the page read."
+   ],
+   "sources": [
+    "https://developers.cloudflare.com/fundamentals/user-profiles/2fa/",
+    "https://developers.cloudflare.com/registrar/account-options/whois-redaction/index.md",
+    "https://developers.cloudflare.com/registrar/get-started/enable-dnssec/index.md",
+    "https://developers.cloudflare.com/registrar/get-started/transfer-domain-to-cloudflare/index.md",
+    "https://developers.cloudflare.com/registrar/registrar-api/index.md",
+    "https://developers.cloudflare.com/registrar/top-level-domains/uk-domains/index.md",
+    "https://www.cloudflare.com/products/registrar/",
+    "https://www.cloudflare.com/tld-policies/"
+   ]
+  },
+  {
+   "id": "route53",
+   "tier": "core",
+   "name": {
+    "value": "AWS Route 53 Domains",
+    "source": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_Operations_Amazon_Route_53_Domains.html",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "homepage": {
+    "value": "https://aws.amazon.com/route53/",
+    "source": "https://aws.amazon.com/route53/pricing/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "api": {
+    "exists": {
+     "value": "yes",
+     "source": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_Operations_Amazon_Route_53_Domains.html",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "docs_url": {
+     "value": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_Operations_Amazon_Route_53_Domains.html",
+     "source": "same",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "auth_style": {
+     "value": "AWS IAM credentials with Signature Version 4 (standard AWS API). Not read on the pages fetched; stated from general AWS practice, so verify.",
+     "source": null,
+     "checked": null,
+     "note": "not directly sourced from pages read"
+    },
+    "sandbox": {
+     "value": "not stated",
+     "source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/pt.html",
+     "checked": "2026-11-25",
+     "note": "No sandbox for Route 53 Domains found in pages read. Docs say the service endpoint is us-east-1 only."
+    },
+    "capabilities": {
+     "can_register": {
+      "value": "yes (RegisterDomain)",
+      "source": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_Operations_Amazon_Route_53_Domains.html",
+      "checked": "2026-11-25",
+      "note": null
+     },
+     "can_transfer": {
+      "value": "yes (TransferDomain, CheckDomainTransferability, RetrieveDomainAuthCode, PushDomain, cross-account transfer actions)",
+      "source": "same",
+      "checked": "2026-11-25",
+      "note": null
+     },
+     "can_renew": {
+      "value": "yes (RenewDomain, Enable/DisableDomainAutoRenew)",
+      "source": "same",
+      "checked": "2026-11-25",
+      "note": null
+     },
+     "can_manage_dns": {
+      "value": "Not part of the Domains API; DNS records are managed with the separate Route 53 hosted zone API.",
+      "source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html",
+      "checked": "2026-11-25",
+      "note": "separate service"
+     },
+     "can_set_nameservers": {
+      "value": "yes (UpdateDomainNameservers)",
+      "source": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_Operations_Amazon_Route_53_Domains.html",
+      "checked": "2026-11-25",
+      "note": null
+     }
+    },
+    "other": {
+     "value": "Also: GetDomainPrices, ListPrices, GetDomainSuggestions, UpdateDomainContact, UpdateDomainContactPrivacy, Enable/DisableDomainTransferLock, Associate/DisassociateDelegationSignerToDomain (DNSSEC), RestoreDomain, DeleteDomain.",
+     "source": "same",
+     "checked": "2026-11-25",
+     "note": null
+    }
+   },
+   "tlds": {
+    "uk": {
+     "value": "yes (.uk, .co.uk, .me.uk, .org.uk)",
+     "source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/uk.html",
+     "checked": "2026-11-25",
+     "note": null,
+     "notes": "Open to the public, no restrictions. Transfer in by setting the Nominet IPS tag to GANDI (no auth code); request transfer within five days. Registrar associate is Gandi. Privacy: the TLD page says all information hidden, but the transfer guide says to enable privacy for .uk family you must open a support case. Deletion not possible, only let expire. No registration extension on transfer for .uk/.co.uk."
+    },
+    "eu": {
+     "value": "yes",
+     "source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/eu.html",
+     "checked": "2026-11-25",
+     "note": null,
+     "notes": "Requires a postal address in one of the 30 EEA states, or EU citizenship (specify country). Privacy protection not supported. Transfer lock not supported. Auth code required (also via my.eurid.eu). Domain deleted on expiry date; restoration up to 40 days."
+    },
+    "pt": {
+     "value": "no (not in the supported TLD list)",
+     "source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html",
+     "checked": "2026-11-25",
+     "note": null,
+     "notes": "Geographic list for Europe has no .pt entry."
+    }
+   },
+   "pricing_model": {
+    "value": null,
+    "source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html",
+    "checked": "2026-11-25",
+    "note": "Not stated on pages read. Prices are per TLD in a PDF price list; premium domains priced by registry."
+   },
+   "prices": {
+    "com": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "Price list is a compressed PDF I could not read; the Route 53 pricing page links to it without figures. Prices are available live via GetDomainPrices/ListPrices API."
+    },
+    "uk": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "as above"
+    },
+    "eu": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "as above"
+    },
+    "pt": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "TLD not supported"
+    }
+   },
+   "price_notes": [
+    {
+     "value": "Annual increments, per domain per year. No volume discounts. Promotional credits cannot be used for domain fees. Registrations and renewals are non-refundable.",
+     "source": "https://aws.amazon.com/route53/pricing/",
+     "checked": "2026-11-25",
+     "note": null
+    }
+   ],
+   "whois_privacy": {
+    "value": "Enabled by default on registration and transfer, no separate charge mentioned. Not available for all TLDs. Note: Amazon Registrar hides all contact info; Gandi (registrar associate for some TLDs) hides all except organisation name. .eu not supported; .uk family needs a support case to enable.",
+    "source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-privacy-protection.html",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "dnssec": {
+    "value": "Supported for registration of .com, .uk, .eu and others: you add the public key (KSK/ZSK, base64) via console or API; up to 13 keys for .com/.net, 4 for others. Route 53 can also sign hosted zones. No automatic DS publication described on the page read: you add keys yourself.",
+    "source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-configure-dnssec.html",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "account_security": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "bulk_reseller": {
+    "value": null,
+    "source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html",
+    "checked": "2026-11-25",
+    "note": "No reseller programme found. Default quota 20 domains per account (increase on request); console transfer-in handles up to five domains at a time."
+   },
+   "other_notes": {
+    "value": "Domains are registered via Amazon Registrar or its associate Gandi depending on TLD. Transfer-in: 60-day rule, unlock, no pendingTransfer or similar statuses, disable DNSSEC at old registrar and wait 24 hours. Owner contact changes are ignored during ccTLD transfers. Most gTLD transfers add a year; .uk, .co.uk, .me.uk, .org.uk do not. Domain registered in us-east-1 region only. Domains usually deleted on account closure.",
+    "source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "access_note": null,
+   "unverified_flags": [
+    "Privacy for .uk: the TLD page says 'All information is hidden' while the transfer guide says a support case is needed to enable privacy for .uk, .co.uk, .me.uk, .org.uk.",
+    "Some Route 53 .uk docs say the IPS tag is GANDI even though AWS runs the console; this reflects the registrar associate.",
+    "Auth style for the API was not read on the pages fetched; the IAM/SigV4 statement is general knowledge and should be confirmed.",
+    "No prices captured: the price PDF could not be read."
+   ],
+   "sources": [
+    "https://aws.amazon.com/route53/pricing/",
+    "https://docs.aws.amazon.com/Route53/latest/APIReference/API_Operations_Amazon_Route_53_Domains.html",
+    "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-configure-dnssec.html",
+    "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-privacy-protection.html",
+    "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html",
+    "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/eu.html",
+    "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/pt.html",
+    "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html",
+    "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/uk.html"
+   ]
+  },
+  {
+   "id": "gandi",
+   "tier": "core",
+   "name": {
+    "value": "Gandi",
+    "source": "https://www.gandi.net/en/domain/tld",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "homepage": {
+    "value": "https://www.gandi.net/",
+    "source": "https://www.gandi.net/en/domain/tld",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "api": {
+    "exists": {
+     "value": "yes",
+     "source": "https://api.gandi.net/docs/domains/",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "docs_url": {
+     "value": "https://api.gandi.net/docs/domains/",
+     "source": "https://api.gandi.net/docs/domains/",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "auth_style": {
+     "value": "Authorization: Bearer personal access token (pat_...). Older Apikey scheme still works but is deprecated.",
+     "source": "https://api.gandi.net/docs/domains/",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "sandbox": {
+     "value": "yes (separate sandbox account and key; base https://api.sandbox.gandi.net/v5/; only .com, .net, .org, .fr; transfer not available; Domain, LiveDNS, Billing, Organization, Mailbox APIs). Also a Dry-Run: 1 header on register.",
+     "source": "https://api.sandbox.gandi.net/docs/sandbox/",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "capabilities": {
+     "can_register": {
+      "value": "yes (POST /v5/domain/domains; availability GET /v5/domain/check)",
+      "source": "https://api.gandi.net/docs/domains/",
+      "checked": "2026-11-25",
+      "note": null
+     },
+     "can_transfer": {
+      "value": "Reseller page says the API supports transfers; I did not see a transfer-in endpoint in the portions of the docs read. Availability check can price a transfer process.",
+      "source": "https://www.gandi.net/en/reseller",
+      "checked": "2026-11-25",
+      "note": null
+     },
+     "can_renew": {
+      "value": "yes (renew path /v5/domain/domains/{domain}/renew per search extract; autorenew PATCH endpoint seen in docs)",
+      "source": "https://api.gandi.net/docs/domains/",
+      "checked": "2026-11-25",
+      "note": null
+     },
+     "can_manage_dns": {
+      "value": "yes via the LiveDNS API (separate doc section)",
+      "source": "https://api.gandi.net/docs/domains/",
+      "checked": "2026-11-25",
+      "note": null
+     },
+     "can_set_nameservers": {
+      "value": "Set at registration; a dedicated update endpoint not confirmed in text read. Enabling LiveDNS applies LiveDNS nameservers via POST /v5/domain/domains/{domain}/livedns.",
+      "source": "https://api.gandi.net/docs/domains/",
+      "checked": "2026-11-25",
+      "note": null
+     }
+    },
+    "other": {
+     "value": "DNSSEC key endpoints (dnskeys list/add/replace/delete) and LiveDNS DNSSEC activation endpoint. Rate limit 1000 requests per minute per IP (per sandbox guide).",
+     "source": "https://api.gandi.net/docs/domains/",
+     "checked": "2026-11-25",
+     "note": null
+    }
+   },
+   "tlds": {
+    "uk": {
+     "value": "yes (.uk and .co.uk)",
+     "source": "https://www.gandi.net/en/domain/tld/uk",
+     "checked": "2026-11-25",
+     "note": null,
+     "notes": "Open to anyone, no local presence stated. Personal data protected at registry level for .uk."
+    },
+    "eu": {
+     "value": "yes",
+     "source": "https://www.gandi.net/en/domain/tld/eu",
+     "checked": "2026-11-25",
+     "note": null,
+     "notes": "Eligible: individuals residing in EU, Norway, Iceland, Liechtenstein; EU citizens; businesses based there. Auth code valid 40 days."
+    },
+    "pt": {
+     "value": "yes",
+     "source": "https://www.gandi.net/en/domain/tld/pt",
+     "checked": "2026-11-25",
+     "note": null,
+     "notes": "Anyone can register. No accented names. Auth code valid 30 days, single use. Renew no later than 2 days before expiry. Owner change via customer service only. 30-day deletion quarantine."
+    }
+   },
+   "pricing_model": {
+    "value": "margin (published retail prices, with promotions; reseller volume discounts exist)",
+    "source": "https://www.gandi.net/en/domain/tld",
+    "checked": "2026-11-25",
+    "note": "Gandi does not state at-cost; classification is my reading of retail price lists."
+   },
+   "prices": {
+    "com": {
+     "first_year": "EUR 11.65",
+     "renewal": "EUR 31.98 (EUR 28.78 per year promo for 2 to 9 years)",
+     "transfer": "EUR 11.65 (includes minimum renewal; 60 days minimum after registration)",
+     "currency": "EUR",
+     "tax_inclusive": false,
+     "reading": "Standard rate ex VAT as displayed for France. Includes free SSL certificate and LiveDNS with DNSSEC.",
+     "source": "https://www.gandi.net/en/domain/tld/com",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "uk": {
+     "first_year": "EUR 8.60 (promo EUR 5.99 first year)",
+     "renewal": "EUR 23.98 (EUR 21.58 promo for 2 to 9 years)",
+     "transfer": "free, does not change expiry",
+     "currency": "EUR",
+     "tax_inclusive": false,
+     "reading": "The .uk page shows these figures; the .co.uk page shows identical figures.",
+     "source": "https://www.gandi.net/en/domain/tld/uk and https://www.gandi.net/en/domain/tld/co.uk",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "eu": {
+     "first_year": "EUR 13.29 (promo EUR 3.99 first year)",
+     "renewal": "EUR 30.00 (EUR 27.00 promo for 2 to 9 years)",
+     "transfer": "EUR 13.29 (renews one year)",
+     "currency": "EUR",
+     "tax_inclusive": false,
+     "reading": "Standard rate ex VAT; promo applies for one year only.",
+     "source": "https://www.gandi.net/en/domain/tld/eu",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "pt": {
+     "first_year": "EUR 17.38",
+     "renewal": "EUR 30.00 (page also showed EUR 40.00 for a 1-year line, see flags)",
+     "transfer": "free, does not change expiry",
+     "currency": "EUR",
+     "tax_inclusive": false,
+     "reading": "Ex VAT as displayed for France.",
+     "source": "https://www.gandi.net/en/domain/tld/pt",
+     "checked": "2026-11-25",
+     "note": null
+    }
+   },
+   "price_notes": [
+    {
+     "value": "Shown in EUR for France, excluding VAT (20% option via selector). EUR, GBP and USD selectable.",
+     "source": "https://www.gandi.net/en/domain/tld/com",
+     "checked": "2026-11-25",
+     "note": null
+    }
+   ],
+   "whois_privacy": {
+    "value": "Free and on by default. For some extensions (.fr, .de, .uk, .nz, .ru) data is protected at registry level and Gandi shows registry-provided WHOIS; email anonymisation does not apply to some extensions including .uk.",
+    "source": "https://docs.gandi.net/en/domain_names/common_operations/whois_privacy.html",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "dnssec": {
+    "value": "Supported. With LiveDNS nameservers, activation is automatic from the Nameservers tab ('Go to DNSSEC'), including DS handling at the registry; with external nameservers you submit the public key manually. ALIAS record on the bare domain breaks DNSSEC. API also exposes dnskeys and LiveDNS DNSSEC activation. Docs pages are old; check live panel.",
+    "source": "https://docs.gandi.net/en/domain_names/advanced_users/dnssec.html",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "account_security": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "bulk_reseller": {
+    "value": "Free reseller account, no commitment; API for domain creation, renewal, transfers, contacts and DNS; lower rates with higher sales volume (no figures published). Bulk transfer docs exist.",
+    "source": "https://www.gandi.net/en/reseller",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "other_notes": {
+    "value": "Some extensions require a Gandi Corporate Services subscription. Late renewal and restore fees are listed per TLD. Gandi is also the registrar associate behind some Route 53 domains.",
+    "source": "https://www.gandi.net/en/domain/tld",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "access_note": null,
+   "unverified_flags": [
+    "Gandi .pt page showed renewal 'from EUR 30.00' but also EUR 40.00 for a 1-year line; I could not tell which applies to a single year.",
+    "The all-TLD price table page only covered .abogado to .az so individual TLD pages were used.",
+    "Transfer and nameserver-update endpoints were not visible in the parts of the API docs read; the reseller page nonetheless claims transfers via the API.",
+    "Gandi DNSSEC, 2FA docs carry old page metadata (several years); menu labels may differ.",
+    "Prices were displayed for France and may differ by country or currency selector."
+   ],
+   "sources": [
+    "https://api.gandi.net/docs/domains/",
+    "https://api.sandbox.gandi.net/docs/sandbox/",
+    "https://docs.gandi.net/en/account_management/security/totp.html",
+    "https://docs.gandi.net/en/domain_names/advanced_users/dnssec.html",
+    "https://docs.gandi.net/en/domain_names/common_operations/whois_privacy.html",
+    "https://docs.gandi.net/en/domain_names/transfer_out/transfer_lock.html",
+    "https://www.gandi.net/en/domain/tld",
+    "https://www.gandi.net/en/domain/tld/com",
+    "https://www.gandi.net/en/domain/tld/eu",
+    "https://www.gandi.net/en/domain/tld/pt",
+    "https://www.gandi.net/en/domain/tld/uk",
+    "https://www.gandi.net/en/domain/tld/uk and https://www.gandi.net/en/domain/tld/co.uk",
+    "https://www.gandi.net/en/reseller"
+   ]
+  },
+  {
+   "id": "porkbun",
+   "tier": "core",
+   "name": {
+    "value": "Porkbun",
+    "source": "https://porkbun.com/products/domains",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "homepage": {
+    "value": "https://porkbun.com/",
+    "source": "https://porkbun.com/products/domains",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "api": {
+    "exists": {
+     "value": "yes",
+     "source": "https://porkbun.com/api/json/v3/documentation",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "docs_url": {
+     "value": "https://porkbun.com/api/json/v3/documentation",
+     "source": "same",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "auth_style": {
+     "value": "API key and secret key, via X-API-Key and X-Secret-API-Key headers or apikey/secretapikey in the JSON body. Keys work with or without account 2FA. Keys can be restricted by IP (CIDR), domains and permissions. Idempotency-Key and dryRun supported.",
+     "source": "same",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "sandbox": {
+     "value": "yes (a pk1_sb_ key runs the API in an isolated environment with fake credit; responses include sandbox: true)",
+     "source": "same",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "capabilities": {
+     "can_register": {
+      "value": "yes (availability/pricing checks up to 25 per call; per-TLD getRegistrationRequirements says whether a TLD is API-registerable)",
+      "source": "same",
+      "checked": "2026-11-25",
+      "note": null
+     },
+     "can_transfer": {
+      "value": "yes (transfer-in listed)",
+      "source": "same",
+      "checked": "2026-11-25",
+      "note": null
+     },
+     "can_renew": {
+      "value": "yes",
+      "source": "same",
+      "checked": "2026-11-25",
+      "note": null
+     },
+     "can_manage_dns": {
+      "value": "yes (record CRUD, DNSSEC DS records, restore points, URL forwarding)",
+      "source": "same",
+      "checked": "2026-11-25",
+      "note": null
+     },
+     "can_set_nameservers": {
+      "value": "yes (read or replace nameservers, manage glue records)",
+      "source": "same",
+      "checked": "2026-11-25",
+      "note": null
+     }
+    },
+    "other": {
+     "value": "Spend cap of USD 100 a month on what keys and agents buy and add as credit until the account holder sets a limit. Webhooks, SSL, email, aftermarket and hosting areas also listed. Exact endpoint paths were not on the page read (OpenAPI spec referenced).",
+     "source": "same",
+     "checked": "2026-11-25",
+     "note": null
+    }
+   },
+   "tlds": {
+    "uk": {
+     "value": "yes (.uk and .co.uk)",
+     "source": "https://porkbun.com/products/domains",
+     "checked": "2026-11-25",
+     "note": null,
+     "notes": "Nominet registry terms apply (DRS). No UK presence requirement seen, but Porkbun's general terms mention bona fide business or commercial use clause (generic). Transfer in by setting IPS tag to PORKBUN; no free renewal year on .uk transfer. WHOIS privacy not supported on .uk family. Sources: https://porkbun.com/legal/agreement/registry_conditions and https://kb.porkbun.com/article/180-how-to-transfer-a-uk-domain-to-porkbun (both via search results, not fetched in full)."
+    },
+    "eu": {
+     "value": "yes (priced on the main table)",
+     "source": "https://porkbun.com/products/domains",
+     "checked": "2026-11-25",
+     "note": null,
+     "notes": "Eligibility rules for .eu not read. Porkbun KB notes .eu registry accepts keyData only for DNSSEC, not dsData."
+    },
+    "pt": {
+     "value": "no (not listed on the pricing page or TLD page)",
+     "source": "https://porkbun.com/tld/pt",
+     "checked": "2026-11-25",
+     "note": null,
+     "notes": "Absence from the list, not an explicit statement."
+    }
+   },
+   "pricing_model": {
+    "value": "margin (retail prices; page says prices include ICANN and other fees)",
+    "source": "https://porkbun.com/products/domains",
+    "checked": "2026-11-25",
+    "note": "Classification is my reading; Porkbun does not claim at-cost."
+   },
+   "prices": {
+    "com": {
+     "first_year": "USD 11.81",
+     "renewal": "USD 11.81",
+     "transfer": "USD 11.81",
+     "currency": "USD",
+     "tax_inclusive": null,
+     "reading": "Non-premium, single-year; includes ICANN fees; transfers usually include a one-year renewal.",
+     "source": "https://porkbun.com/products/domains",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "uk": {
+     "first_year": "USD 5.66",
+     "renewal": "USD 5.66",
+     "transfer": "USD 0.00",
+     "currency": "USD",
+     "tax_inclusive": null,
+     "reading": "Same figures shown for .co.uk. .uk transfers give no free renewal year.",
+     "source": "https://porkbun.com/products/domains",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "eu": {
+     "first_year": "USD 5.88",
+     "renewal": "USD 5.88",
+     "transfer": "USD 5.88",
+     "currency": "USD",
+     "tax_inclusive": null,
+     "reading": "Non-premium single year.",
+     "source": "https://porkbun.com/products/domains",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "pt": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not offered per pages read"
+    }
+   },
+   "price_notes": [],
+   "whois_privacy": {
+    "value": "Free with every Porkbun domain, but not supported on .uk, .co.uk, org.uk, me.uk due to registry restrictions.",
+    "source": "https://porkbun.com/products/domains",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "dnssec": {
+    "value": "Supported: 'Porkbun DNSSEC' toggle for Porkbun nameservers; 'Registry DNSSEC' where you enter DS/key data for third-party nameservers. API manages DS records on Porkbun nameservers. Whether DS publication is fully automatic was not stated in the pages read.",
+    "source": "https://kb.porkbun.com/article/93-how-to-install-dnssec",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "account_security": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "bulk_reseller": {
+    "value": null,
+    "source": "https://porkbun.com/api/json/v3/documentation",
+    "checked": "2026-11-25",
+    "note": "No reseller programme found on pages read. Bulk availability check up to 25 per call; authorised-user feature requires 2FA."
+   },
+   "other_notes": {
+    "value": "API spend cap USD 100 a month by default. Authorised Users cannot unlock domains or start transfers. Most transfers include a one-year renewal except .uk and a few others.",
+    "source": "https://porkbun.com/api/json/v3/documentation",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "access_note": null,
+   "unverified_flags": [
+    "The Porkbun API doc page is aimed at 'developers and AI agents' and contains instructions about agents and spending; treated purely as material.",
+    "Porkbun .uk requirement text (bona fide business use) is a general clause from the registry conditions page seen only in search results, so UK-specific requirements are unconfirmed.",
+    "Tax treatment of listed prices not stated.",
+    "DNSSEC page content seen only in search summaries."
+   ],
+   "sources": [
+    "https://kb.porkbun.com/article/93-how-to-install-dnssec",
+    "https://porkbun.com/api/json/v3/documentation",
+    "https://porkbun.com/products/domains",
+    "https://porkbun.com/security",
+    "https://porkbun.com/tld/pt"
+   ]
+  },
+  {
+   "id": "namecheap",
+   "tier": "core",
+   "name": {
+    "value": "Namecheap",
+    "source": "https://www.namecheap.com/support/api/intro/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "homepage": {
+    "value": "https://www.namecheap.com/",
+    "source": "https://www.namecheap.com/domains/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "api": {
+    "exists": {
+     "value": "yes (with access requirements)",
+     "source": "https://www.namecheap.com/support/api/intro/",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "docs_url": {
+     "value": "https://www.namecheap.com/support/api/methods/",
+     "source": "same",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "auth_style": {
+     "value": "API key plus API username (same as account username), with at least one whitelisted IPv4 address. Access requires one of: 20+ domains, USD 50+ balance, or USD 50+ spent in last 2 years.",
+     "source": "https://www.namecheap.com/support/api/intro/",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "sandbox": {
+     "value": "yes (separate sandbox account, unrestricted use; also needs IPv4 whitelist; no test coupon codes)",
+     "source": "https://www.namecheap.com/support/knowledgebase/article.aspx/763/63/what-is-sandbox/",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "capabilities": {
+     "can_register": {
+      "value": "yes (namecheap.domains.create)",
+      "source": "https://www.namecheap.com/support/api/methods/domains/create/",
+      "checked": "2026-11-25",
+      "note": null
+     },
+     "can_transfer": {
+      "value": "yes (namecheap.domains.transfer.create, EPP code needed for most TLDs; TLD list for API transfer differs between pages)",
+      "source": "https://www.namecheap.com/support/api/methods/domains-transfer/create/",
+      "checked": "2026-11-25",
+      "note": null
+     },
+     "can_renew": {
+      "value": "yes (namecheap.domains.renew)",
+      "source": "https://www.namecheap.com/support/api/methods/domains/renew/",
+      "checked": "2026-11-25",
+      "note": null
+     },
+     "can_manage_dns": {
+      "value": "yes (namecheap.domains.dns.* methods; custom nameserver mode disables URL/email forwarding and dynamic DNS)",
+      "source": "https://www.namecheap.com/support/api/methods/domains-dns/set-custom/",
+      "checked": "2026-11-25",
+      "note": null
+     },
+     "can_set_nameservers": {
+      "value": "yes (namecheap.domains.dns.setCustom, up to 1200 characters; domains.ns.create for glue)",
+      "source": "same",
+      "checked": "2026-11-25",
+      "note": null
+     }
+    },
+    "other": {
+     "value": "Also namecheap.domains.setRegistrarLock and domain privacy methods. Drop-catching via API not allowed.",
+     "source": "https://www.namecheap.com/support/api/methods/domains/set-registrar-lock/",
+     "checked": "2026-11-25",
+     "note": null
+    }
+   },
+   "tlds": {
+    "uk": {
+     "value": "yes (.uk and .co.uk)",
+     "source": "https://www.namecheap.com/domains/registration/cctld/uk/",
+     "checked": "2026-11-25",
+     "note": null,
+     "notes": "No presence requirement seen in summaries. Transfer in: no auth code; set IPS tag to NAMECHEAP-INC; free, no renewal added. Source: https://www.namecheap.com/support/knowledgebase/article.aspx/738/8/transfer-of-uk-couk-orguk-meuk-to-namecheap/"
+    },
+    "eu": {
+     "value": "yes (price table lists .eu)",
+     "source": "https://www.namecheap.com/domains/",
+     "checked": "2026-11-25",
+     "note": null,
+     "notes": "Eligibility not read."
+    },
+    "pt": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "No .pt pricing or support found in search results; unconfirmed.",
+     "notes": null
+    }
+   },
+   "pricing_model": {
+    "value": "margin (retail prices with sale and promo pricing; volume pricing from 50+ domains)",
+    "source": "https://www.namecheap.com/support/knowledgebase/article.aspx/754/63/do-you-have-a-domain-reseller-program/",
+    "checked": "2026-11-25",
+    "note": "My reading of retail list vs sale prices."
+   },
+   "prices": {
+    "com": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "Not read; the .com page returned 403."
+    },
+    "uk": {
+     "first_year": "USD 6.98 (sale; regular USD 7.48)",
+     "renewal": "USD 9.98",
+     "transfer": "USD 0.00",
+     "currency": "USD",
+     "tax_inclusive": null,
+     "reading": "From search summary of the .uk and .co.uk pages, same figures; pages vary in date so prices may have changed; a coupon page showed USD 6.78.",
+     "source": "https://www.namecheap.com/domains/registration/cctld/co-uk/",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "eu": {
+     "first_year": "USD 5.98 (sale, 33% off; regular USD 8.98)",
+     "renewal": "USD 10.98",
+     "transfer": null,
+     "currency": "USD",
+     "tax_inclusive": null,
+     "reading": "From search summary only; transfer price not found.",
+     "source": "https://www.namecheap.com/domains/",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "pt": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not found"
+    }
+   },
+   "price_notes": [],
+   "whois_privacy": {
+    "value": "Free domain privacy ('Withheld for Privacy', formerly WhoisGuard), on by default for eligible TLDs; not available where the registry forbids it. Blog says free for as long as you remain a customer.",
+    "source": "https://www.namecheap.com/security/whoisguard",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "dnssec": {
+    "value": "Supported when using Namecheap DNS (Basic or Premium DNS); depends on using Namecheap nameservers. Automation of DS at registry not detailed.",
+    "source": "https://www.namecheap.com/security/whoisguard",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "account_security": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "bulk_reseller": {
+    "value": "No formal domain reseller programme; resell via the API at standard prices plus monthly coupons; special volume pricing from 50+ domains. Separate SSL reseller programme exists.",
+    "source": "https://www.namecheap.com/support/knowledgebase/article.aspx/754/63/do-you-have-a-domain-reseller-program/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "other_notes": {
+    "value": "API needs IPv4 whitelist. Transfers to Namecheap: ICANN fee of USD 0.20 may be added for some domains; .uk transfers are free without renewal; .UK transfers allowed within 60 days of registration or transfer.",
+    "source": "https://www.namecheap.com/domains/transfer/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "access_note": {
+    "value": "namecheap.com pages returned HTTP 403 to direct fetches. All Namecheap facts below come from search-result summaries of official namecheap.com pages, not full page reads. Treat as lower confidence and re-check manually.",
+    "source": null,
+    "checked": null,
+    "note": null
+   },
+   "unverified_flags": [
+    "Direct fetches of namecheap.com returned 403; everything is from search summaries.",
+    "2FA methods conflict: support article says U2F and TOTP only; an older blog post mentions SMS.",
+    "Namecheap API transfer-eligible TLD list differs between the methods index and the transfer.create page.",
+    "Price pages carried mixed dates and a coupon page showed a different .co.uk figure; the .uk pages also quoted pounds on an older page."
+   ],
+   "sources": [
+    "https://www.namecheap.com/domains/",
+    "https://www.namecheap.com/domains/registration/cctld/co-uk/",
+    "https://www.namecheap.com/domains/registration/cctld/uk/",
+    "https://www.namecheap.com/domains/transfer/",
+    "https://www.namecheap.com/security/whoisguard",
+    "https://www.namecheap.com/support/api/intro/",
+    "https://www.namecheap.com/support/api/methods/domains-dns/set-custom/",
+    "https://www.namecheap.com/support/api/methods/domains-transfer/create/",
+    "https://www.namecheap.com/support/api/methods/domains/create/",
+    "https://www.namecheap.com/support/api/methods/domains/renew/",
+    "https://www.namecheap.com/support/api/methods/domains/set-registrar-lock/",
+    "https://www.namecheap.com/support/knowledgebase/article.aspx/565/8/what-is-registrar-lock/",
+    "https://www.namecheap.com/support/knowledgebase/article.aspx/754/63/do-you-have-a-domain-reseller-program/",
+    "https://www.namecheap.com/support/knowledgebase/article.aspx/763/63/what-is-sandbox/",
+    "https://www.namecheap.com/support/knowledgebase/article.aspx/9253/45/how-can-i-enabledisable-twofactor-authentication/"
+   ]
+  },
+  {
+   "id": "ovhcloud",
+   "tier": "core",
+   "name": {
+    "value": "OVHcloud",
+    "source": "https://www.ovhcloud.com/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "homepage": {
+    "value": "https://www.ovhcloud.com/",
+    "source": "https://www.ovhcloud.com/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "api": {
+    "exists": {
+     "value": "yes",
+     "source": "https://docs.ovhcloud.com/en/guides/manage-and-operate/api/first-steps",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "docs_url": {
+     "value": "https://docs.ovhcloud.com/en/guides/manage-and-operate/api/first-steps",
+     "source": "https://docs.ovhcloud.com/en/guides/manage-and-operate/api/first-steps",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "auth_style": {
+     "value": "Application key, application secret and consumer key; requests signed with SHA-1 over secret, consumer key, method, URL, body and timestamp. Wrapper libraries sign for you.",
+     "source": "https://docs.ovhcloud.com/en/guides/manage-and-operate/api/first-steps",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "sandbox": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "The API guide page did not mention a sandbox; not confirmed (page was only partly read)"
+    },
+    "capabilities": {
+     "can_register": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_transfer": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_renew": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_manage_dns": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_set_nameservers": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     }
+    },
+    "other": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated"
+    }
+   },
+   "tlds": {
+    "uk": {
+     "value": "yes: .uk and .co.uk sold at GBP 4.50 first year (ex. VAT)",
+     "source": "https://www.ovhcloud.com/en-gb/domains/tld/",
+     "checked": "2026-11-25",
+     "note": null,
+     "notes": null
+    },
+    "eu": {
+     "value": "yes: .eu sold at GBP 6.39 first year",
+     "source": "https://www.ovhcloud.com/en-gb/domains/tld/",
+     "checked": "2026-11-25",
+     "note": null,
+     "notes": null
+    },
+    "pt": {
+     "value": "yes: .pt page exists; price not visible in the page read",
+     "source": "https://www.ovhcloud.com/en-gb/domains/tld/pt/",
+     "checked": "2026-11-25",
+     "note": null,
+     "notes": null
+    }
+   },
+   "pricing_model": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "prices": {
+    "com": {
+     "first_year": "7.49",
+     "renewal": "12.49",
+     "transfer": "7.49",
+     "currency": "GBP",
+     "tax_inclusive": false,
+     "reading": "OVH .uk page shows prices ex. VAT (source: https://www.ovhcloud.com/en-gb/domains/tld/pt/); assumed same table",
+     "source": "https://www.ovhcloud.com/en-gb/domains/tld/",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "uk": {
+     "first_year": "4.50 (.uk and .co.uk)",
+     "renewal": "8.99",
+     "transfer": "0.00",
+     "currency": "GBP",
+     "tax_inclusive": false,
+     "reading": "OVH .uk page shows prices ex. VAT (source: https://www.ovhcloud.com/en-gb/domains/tld/pt/); assumed same table",
+     "source": "https://www.ovhcloud.com/en-gb/domains/tld/",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "eu": {
+     "first_year": "6.39",
+     "renewal": "7.39",
+     "transfer": "6.39",
+     "currency": "GBP",
+     "tax_inclusive": false,
+     "reading": "OVH .uk page shows prices ex. VAT (source: https://www.ovhcloud.com/en-gb/domains/tld/pt/); assumed same table",
+     "source": "https://www.ovhcloud.com/en-gb/domains/tld/",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "pt": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    }
+   },
+   "price_notes": [],
+   "whois_privacy": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "dnssec": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "OVH DNSSEC guide URL guess returned 404; not sourced"
+   },
+   "account_security": {
+    "value": "2FA: SMS, authenticator app, security key, backup codes (10 single-use). Domain lock ('Transfer protection') on by default (clientTransferProhibited); unlocking for outgoing transfer lasts 7 days then re-locks.",
+    "source": "https://docs.ovhcloud.com/en/guides/account-and-service-management/account-information/secure-ovhcloud-account-with-2fa",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "bulk_reseller": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "other_notes": {
+    "value": "Docs moved from help.ovhcloud.com to docs.ovhcloud.com (301). Price table is the UK page; tax status not stated.",
+    "source": "https://docs.ovhcloud.com/en/guides/manage-and-operate/api/first-steps",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "access_note": null,
+   "unverified_flags": [
+    "Tax-inclusive status of OVH prices not stated on page.",
+    "Sandbox existence not confirmed (partial read).",
+    "OVH tax status taken from .pt page showing ex. VAT; the main TLD table page did not state it."
+   ],
+   "sources": [
+    "https://docs.ovhcloud.com/en/guides/account-and-service-management/account-information/secure-ovhcloud-account-with-2fa",
+    "https://docs.ovhcloud.com/en/guides/manage-and-operate/api/first-steps",
+    "https://docs.ovhcloud.com/en/guides/web-cloud/domains/api-domain-order",
+    "https://www.ovhcloud.com/",
+    "https://www.ovhcloud.com/en-gb/domains/tld/",
+    "https://www.ovhcloud.com/en-gb/domains/tld/pt/"
+   ]
+  },
+  {
+   "id": "inwx",
+   "tier": "core",
+   "name": {
+    "value": "INWX",
+    "source": "https://www.inwx.com/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "homepage": {
+    "value": "https://www.inwx.com/",
+    "source": "https://www.inwx.com/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "api": {
+    "exists": {
+     "value": "yes",
+     "source": "https://inwx.com/en/offer/api",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "docs_url": {
+     "value": "https://account.inwx.com/en/help/apidoc",
+     "source": "https://inwx.com/en/offer/api",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "auth_style": {
+     "value": "Account login via XML-RPC or JSON-RPC (DomRobot); credentials not detailed on page read",
+     "source": "https://inwx.com/en/offer/api",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "sandbox": {
+     "value": "yes: free OT&E at ote.inwx.com with a test database, no real charges",
+     "source": "https://inwx.com/en/offer/api",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "capabilities": {
+     "can_register": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_transfer": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_renew": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_manage_dns": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_set_nameservers": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     }
+    },
+    "other": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated"
+    }
+   },
+   "tlds": {
+    "uk": {
+     "value": "yes: .co.uk offered, USD 12.00 per year headline, transfer free, no extra presence forms listed; .uk not confirmed",
+     "source": "https://www.inwx.com/en/co.uk-domain",
+     "checked": "2026-11-25",
+     "note": null,
+     "notes": null
+    },
+    "eu": {
+     "value": "yes: open to any EU citizen regardless of residence",
+     "source": "https://www.inwx.com/en/eu-domain",
+     "checked": "2026-11-25",
+     "note": null,
+     "notes": null
+    },
+    "pt": {
+     "value": "yes: no trustee or extra forms listed",
+     "source": "https://www.inwx.com/en/pt-domain",
+     "checked": "2026-11-25",
+     "note": null,
+     "notes": null
+    }
+   },
+   "pricing_model": {
+    "value": "mixed: standard prices plus business volume tiers needing support activation",
+    "source": "https://www.inwx.com/en/domain/pricelist",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "prices": {
+    "com": {
+     "first_year": "15.72 / 15.12 / 14.52 across tiers (over 250, 1,000, 3,000 domains); register/renew/transfer not split",
+     "renewal": null,
+     "transfer": null,
+     "currency": "USD",
+     "tax_inclusive": false,
+     "reading": "net prices plus VAT",
+     "source": "https://www.inwx.com/en/domain/pricelist",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "uk": {
+     "first_year": "12.00 (.co.uk)",
+     "renewal": null,
+     "transfer": "free (without renewal)",
+     "currency": "USD",
+     "tax_inclusive": null,
+     "reading": "renewal not shown in page text; VAT not mentioned",
+     "source": "https://www.inwx.com/en/co.uk-domain",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "eu": {
+     "first_year": "12.00 standard, promo 5.01 if paid by 02.12.2026",
+     "renewal": null,
+     "transfer": null,
+     "currency": "USD",
+     "tax_inclusive": null,
+     "reading": "VAT not mentioned; conflicts with tier prices on price list page",
+     "source": "https://www.inwx.com/en/eu-domain",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "pt": {
+     "first_year": "42.00",
+     "renewal": null,
+     "transfer": "free (without renewal)",
+     "currency": "USD",
+     "tax_inclusive": null,
+     "reading": null,
+     "source": "https://www.inwx.com/en/pt-domain",
+     "checked": "2026-11-25",
+     "note": null
+    }
+   },
+   "price_notes": [],
+   "whois_privacy": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "dnssec": {
+    "value": "yes: automatic mode by default, or manual DNSKEY/DS entry; some TLDs support DNSKEY only",
+    "source": "https://kb.inwx.com/en-us/3-nameserver/131-how-do-i-set-up-dnssec-for-my-domain",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "account_security": {
+    "value": "2FA described as mobile TAN on homepage (other methods not confirmed); transfer lock removed when AUTH code requested; Registry Lock available for some TLDs such as .com",
+    "source": "https://kb.inwx.com/en-us/16-transfer/11-how-can-i-transfer-a-domain-to-another-provider",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "bulk_reseller": {
+    "value": "Reseller programme with API and WHMCS module: https://www.inwx.com/en/customer-solutions/reseller",
+    "source": "https://inwx.com/en/offer/api",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "other_notes": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "access_note": null,
+   "unverified_flags": [
+    "The price page read showed tier prices only; the public base price list was not captured.",
+    "Page /en/domain/api returned 404; correct API page is /en/offer/api.",
+    "INWX .eu page shows USD 12.00 (promo 5.01) while price list tier table shows USD 11.30 to 10.10 for .eu; pages not reconciled."
+   ],
+   "sources": [
+    "https://inwx.com/en/offer/api",
+    "https://kb.inwx.com/en-us/16-transfer/11-how-can-i-transfer-a-domain-to-another-provider",
+    "https://kb.inwx.com/en-us/3-nameserver/131-how-do-i-set-up-dnssec-for-my-domain",
+    "https://www.inwx.com/",
+    "https://www.inwx.com/en/co.uk-domain",
+    "https://www.inwx.com/en/domain/pricelist",
+    "https://www.inwx.com/en/eu-domain",
+    "https://www.inwx.com/en/pt-domain"
+   ]
+  },
+  {
+   "id": "hostinger",
+   "tier": "core",
+   "name": {
+    "value": "Hostinger",
+    "source": "https://www.hostinger.com/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "homepage": {
+    "value": "https://www.hostinger.com/",
+    "source": "https://www.hostinger.com/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "api": {
+    "exists": {
+     "value": "yes",
+     "source": "https://docs.hostinger.com/api-reference/overview",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "docs_url": {
+     "value": "https://docs.hostinger.com/api-reference/overview",
+     "source": "https://docs.hostinger.com/api-reference/overview",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "auth_style": {
+     "value": "Bearer API token generated in hPanel; inherits creating user's permissions; can expire",
+     "source": "https://docs.hostinger.com/api-reference/overview",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "sandbox": {
+     "value": "no sandbox mentioned; the docs 'Test it' panel hits the live API",
+     "source": "https://docs.hostinger.com/api-reference/overview",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "capabilities": {
+     "can_register": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_transfer": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_renew": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_manage_dns": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_set_nameservers": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     }
+    },
+    "other": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated"
+    }
+   },
+   "tlds": {
+    "uk": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "hostinger.com/domains/pt-domain returned 404; .uk not on the main table",
+     "notes": null
+    },
+    "eu": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read",
+     "notes": null
+    },
+    "pt": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read",
+     "notes": null
+    }
+   },
+   "pricing_model": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "prices": {
+    "com": {
+     "first_year": "19.99 standard (0.01 with 3-year term, 39.99 due)",
+     "renewal": "19.99",
+     "transfer": "9.99",
+     "currency": "USD",
+     "tax_inclusive": null,
+     "reading": null,
+     "source": "https://www.hostinger.com/domains",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "uk": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "eu": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "pt": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    }
+   },
+   "price_notes": [],
+   "whois_privacy": {
+    "value": "Free WHOIS privacy on new registrations and transfers for supported extensions (not .ai or .si); .uk, .eu, .pt not stated",
+    "source": "https://www.hostinger.com/domains",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "dnssec": {
+    "value": "yes: enable with DNS provider and publish DS record at registrar; must be off for transfer out",
+    "source": "https://www.hostinger.com/tutorials/how-to-prevent-domain-hijacking/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "account_security": {
+    "value": "Transfer lock toggle in hPanel; 2FA via authenticator app with recovery codes; Domain Shield asks for OTP before transfer, nameserver, contact or privacy changes. Transfer out requires DNSSEC disabled.",
+    "source": "https://www.hostinger.com/tutorials/how-to-prevent-domain-hijacking/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "bulk_reseller": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "other_notes": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "access_note": null,
+   "unverified_flags": [
+    "Domain price page shows USD and tax status not stated.",
+    "Hostinger API domain purchase endpoints not verified."
+   ],
+   "sources": [
+    "https://docs.hostinger.com/api-reference/overview",
+    "https://docs.hostinger.com/llms.txt",
+    "https://www.hostinger.com/",
+    "https://www.hostinger.com/domains",
+    "https://www.hostinger.com/tutorials/how-to-prevent-domain-hijacking/"
+   ]
+  },
+  {
+   "id": "networksolutions",
+   "tier": "core",
+   "name": {
+    "value": "Network Solutions",
+    "source": "https://www.networksolutions.com/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "homepage": {
+    "value": "https://www.networksolutions.com/",
+    "source": "https://www.networksolutions.com/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "api": {
+    "exists": {
+     "value": "limited (wholesale partners; XML-based Partner Protocol)",
+     "source": "https://partners.networksolutions.com/en_US/help/faq-main.html",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "docs_url": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "no public developer docs found; Partner Portal help at https://partners.networksolutions.com/en_US/help/index.html is the nearest"
+    },
+    "auth_style": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated; no public API reference found"
+    },
+    "sandbox": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated"
+    },
+    "capabilities": {
+     "can_register": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_transfer": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_renew": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_manage_dns": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_set_nameservers": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     }
+    },
+    "other": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated"
+    }
+   },
+   "tlds": {
+    "uk": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    },
+    "eu": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    },
+    "pt": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    }
+   },
+   "pricing_model": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "prices": {
+    "com": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "uk": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "eu": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "pt": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    }
+   },
+   "price_notes": [],
+   "whois_privacy": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "dnssec": {
+    "value": "yes: enabled from DNS settings (blog; not a help article)",
+    "source": "https://www.networksolutions.com/blog/what-is-dnssec/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "account_security": {
+    "value": "Domain Lock switch on domain Security tab; 2FA in Security Settings, typically authenticator app (blog); only Primary Contact can change some settings; 30-day lock possible after security changes near a password reset",
+    "source": "https://www.networksolutions.com/help/article/different-types-of-domain-locks",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "bulk_reseller": {
+    "value": "Wholesale Partner Program (SRSplus: web interface, Perl API, XML API); volume commitment required; contact form at https://www.networksolutions.com/partners/partner-contact.jsp",
+    "source": "https://www.networksolutions.com/partners/wholesale/index.jsp",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "other_notes": {
+    "value": "No public developer documentation found by search; API appears to be for wholesale partners only.",
+    "source": "https://www.networksolutions.com/partners/wholesale/index.jsp",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "access_note": null,
+   "unverified_flags": [
+    "Search did not surface any Network Solutions public API docs; treat API as partner-only until confirmed.",
+    "2FA and DNSSEC details come from search summaries of blog posts; menu names unverified."
+   ],
+   "sources": [
+    "https://partners.networksolutions.com/en_US/help/faq-main.html",
+    "https://www.networksolutions.com/",
+    "https://www.networksolutions.com/blog/what-is-dnssec/",
+    "https://www.networksolutions.com/help/article/different-types-of-domain-locks",
+    "https://www.networksolutions.com/partners/wholesale/index.jsp"
+   ]
+  },
+  {
+   "id": "dynadot",
+   "tier": "core",
+   "name": {
+    "value": "Dynadot",
+    "source": "https://www.dynadot.com/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "homepage": {
+    "value": "https://www.dynadot.com/",
+    "source": "https://www.dynadot.com/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "api": {
+    "exists": {
+     "value": "yes (marked Beta)",
+     "source": "https://www.dynadot.com/domain/api-document",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "docs_url": {
+     "value": "https://www.dynadot.com/domain/api-document",
+     "source": "https://www.dynadot.com/domain/api-document",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "auth_style": {
+     "value": "API key as Bearer token; transactional calls also need HMAC-SHA256 X-Signature (Base64) using secret",
+     "source": "https://www.dynadot.com/domain/api-document",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "sandbox": {
+     "value": "yes: api-sandbox.dynadot.com, separate sandbox key, pre-funded 10,000 per currency; some commands unavailable",
+     "source": "https://www.dynadot.com/domain/api-document",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "capabilities": {
+     "can_register": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_transfer": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_renew": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_manage_dns": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_set_nameservers": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     }
+    },
+    "other": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated"
+    }
+   },
+   "tlds": {
+    "uk": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not visible in price table; per-TLD page not confirmed",
+     "notes": null
+    },
+    "eu": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    },
+    "pt": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    }
+   },
+   "pricing_model": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "prices": {
+    "com": {
+     "first_year": "10.87",
+     "renewal": "10.87",
+     "transfer": "10.87",
+     "currency": "EUR",
+     "tax_inclusive": null,
+     "reading": null,
+     "source": "https://www.dynadot.com/domain/pricing",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "uk": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "eu": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "pt": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    }
+   },
+   "price_notes": [],
+   "whois_privacy": {
+    "value": "Free domain privacy on all domains",
+    "source": "https://www.dynadot.com/domain/pricing",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "dnssec": {
+    "value": "yes: set DS records in Manage Domains when using third-party nameservers (up to three records)",
+    "source": "https://www.dynadot.com/help/question/set-DNSSEC",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "account_security": {
+    "value": "2FA by SMS or Google Authenticator app; domain lock default on all registrations and transfers; unlock needs security PIN plus token/SMS if enabled; paid Registry Lock takes 3-5 business days",
+    "source": "https://www.dynadot.com/help/account-domain-management/account-domain-security",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "bulk_reseller": {
+    "value": "API price levels Regular, Bulk (600/min) and Super Bulk (6,000/min); how levels are granted not stated",
+    "source": "https://www.dynadot.com/domain/api-document",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "other_notes": {
+    "value": "API stated to be in Beta; endpoints may change without notice. No further account requirements listed.",
+    "source": "https://www.dynadot.com/domain/api-document",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "access_note": null,
+   "unverified_flags": [
+    "Pricing page showed .com as EUR 10.87 for register, renew and transfer; the page did not list .uk, .eu, .pt (83 pages of results)."
+   ],
+   "sources": [
+    "https://www.dynadot.com/",
+    "https://www.dynadot.com/domain/api-document",
+    "https://www.dynadot.com/domain/pricing",
+    "https://www.dynadot.com/help/account-domain-management/account-domain-security",
+    "https://www.dynadot.com/help/question/set-DNSSEC"
+   ]
+  },
+  {
+   "id": "googledomains",
+   "tier": "core",
+   "name": {
+    "value": "Google Cloud Domains (Squarespace Domains)",
+    "source": "https://cloud.google.com/domains/docs/overview",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "homepage": {
+    "value": "https://cloud.google.com/domains/docs/overview",
+    "source": "https://cloud.google.com/domains/docs/overview",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "api": {
+    "exists": {
+     "value": "yes",
+     "source": "https://docs.cloud.google.com/domains/docs/faq",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "docs_url": {
+     "value": "https://docs.cloud.google.com/domains/docs",
+     "source": "https://docs.cloud.google.com/domains/docs/faq",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "auth_style": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "Google Cloud IAM (not read in detail)"
+    },
+    "sandbox": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated"
+    },
+    "capabilities": {
+     "can_register": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_transfer": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_renew": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_manage_dns": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_set_nameservers": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     }
+    },
+    "other": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated"
+    }
+   },
+   "tlds": {
+    "uk": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    },
+    "eu": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    },
+    "pt": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    }
+   },
+   "pricing_model": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "prices": {
+    "com": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "uk": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "eu": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "pt": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    }
+   },
+   "price_notes": [],
+   "whois_privacy": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "dnssec": {
+    "value": "yes: on by default for Squarespace-managed domains on supported TLDs; custom nameservers disable it until DS/DNSKEY added",
+    "source": "https://support.squarespace.com/hc/en-us/articles/205812338-Transfer-a-domain-away-from-Squarespace",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "account_security": {
+    "value": "Squarespace Domains: Domain Lock toggle; transfer code needs password or 2FA re-authentication; 60-day locks after registration or transfer",
+    "source": "https://support.squarespace.com/hc/en-us/articles/205812338-Transfer-a-domain-away-from-Squarespace",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "bulk_reseller": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "other_notes": {
+    "value": "Google Domains was sold to Squarespace. Squarespace Domains is the registrar for domains managed in Cloud Domains. FAQ says transfers in from third-party registrars and import/export with Google Domains are not supported after the transition. FAQ text is pre-migration (expected no sooner than early 2024) and gives no shutdown date; it refers to a Deprecations page.",
+    "source": "https://docs.cloud.google.com/domains/docs/faq",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "access_note": null,
+   "unverified_flags": [
+    "FAQ timing language is dated; current status of Cloud Domains and any deprecation date not confirmed. Check https://cloud.google.com/domains/docs/deprecations before use.",
+    "Security details are for Squarespace Domains generally; Cloud Domains-specific security not confirmed."
+   ],
+   "sources": [
+    "https://cloud.google.com/domains/docs/overview",
+    "https://docs.cloud.google.com/domains/docs/faq",
+    "https://support.squarespace.com/hc/en-us/articles/205812338-Transfer-a-domain-away-from-Squarespace"
+   ]
+  },
+  {
+   "id": "namecom",
+   "tier": "extra",
+   "name": {
+    "value": "Name.com",
+    "source": "https://www.name.com/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "homepage": {
+    "value": "https://www.name.com/",
+    "source": "https://www.name.com/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "api": {
+    "exists": {
+     "value": "yes",
+     "source": "https://www.name.com/api-resources",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "docs_url": {
+     "value": "https://docs.name.com (Core API); legacy v4 at https://www.name.com/api-docs",
+     "source": "https://www.name.com/api-resources",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "auth_style": {
+     "value": "Username and token over HTTPS (HTTP basic style); separate production and test tokens from account API settings",
+     "source": "https://www.name.com/api-resources",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "sandbox": {
+     "value": "yes: https://api.dev.name.com, username with -test suffix, test credit given, separate from production",
+     "source": "https://www.name.com/api-docs",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "capabilities": {
+     "can_register": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_transfer": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_renew": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_manage_dns": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_set_nameservers": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     }
+    },
+    "other": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated"
+    }
+   },
+   "tlds": {
+    "uk": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    },
+    "eu": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    },
+    "pt": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    }
+   },
+   "pricing_model": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "prices": {
+    "com": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "uk": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "eu": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "pt": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    }
+   },
+   "price_notes": [],
+   "whois_privacy": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "dnssec": {
+    "value": "yes (where TLD supports it): DNSSEC Management page; API has create-DNSSEC endpoint",
+    "source": "https://www.name.com/support/articles/205439058-managing-dnssec",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "account_security": {
+    "value": "Two-Step Verification via Google Authenticator (free); standard domain lock; Domain Lock Plus (Advanced Security product) needs 2SV to disable and blocks nameserver changes",
+    "source": "https://www.name.com/support/articles/360001399428-enabling-domain-lock-plus",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "bulk_reseller": {
+    "value": "Reseller programme: you collect payment from customers, all domains held in one Name.com account, WHMCS module available, white-label email via api@name.com",
+    "source": "https://www.name.com/api-resources",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "other_notes": {
+    "value": "Legacy docs: rate limit 20 requests/s and 3,000/hour; accounts with Two-Step Verification enabled are not compatible with the API; payment method must be set in billing before purchase.",
+    "source": "https://www.name.com/api-docs",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "access_note": null,
+   "unverified_flags": [
+    "Legacy v4 page notes 2-step accounts incompatible with API; current Core API docs not read, may differ."
+   ],
+   "sources": [
+    "https://docs.name.com/docs/api-reference/dnssecs/create-dnssec",
+    "https://www.name.com/",
+    "https://www.name.com/api-docs",
+    "https://www.name.com/api-resources",
+    "https://www.name.com/support/articles/205439058-managing-dnssec",
+    "https://www.name.com/support/articles/360001399428-enabling-domain-lock-plus"
+   ]
+  },
+  {
+   "id": "godaddy",
+   "tier": "extra",
+   "name": {
+    "value": "GoDaddy",
+    "source": "https://www.godaddy.com/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "homepage": {
+    "value": "https://www.godaddy.com/",
+    "source": "https://www.godaddy.com/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "api": {
+    "exists": {
+     "value": "yes",
+     "source": "https://developer.godaddy.com/en/docs/api-users",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "docs_url": {
+     "value": "https://developer.godaddy.com/",
+     "source": "https://developer.godaddy.com/en/docs/api-users",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "auth_style": {
+     "value": "Personal Access Token as Bearer (scopes e.g. domains.domain:read). Classic Developer Key does not work for v3 Domains APIs.",
+     "source": "https://developer.godaddy.com/en/docs/api-users",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "sandbox": {
+     "value": "no: 'There is no local dev server, all requests go to production' (getstarted page); OTE not confirmed",
+     "source": "https://developer.godaddy.com/getstarted",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "capabilities": {
+     "can_register": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_transfer": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_renew": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_manage_dns": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_set_nameservers": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     }
+    },
+    "other": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated"
+    }
+   },
+   "tlds": {
+    "uk": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    },
+    "eu": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    },
+    "pt": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    }
+   },
+   "pricing_model": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "prices": {
+    "com": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "uk": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "eu": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "pt": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    }
+   },
+   "price_notes": [],
+   "whois_privacy": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "dnssec": {
+    "value": "yes for GoDaddy nameservers (not ccTLDs); with other nameservers add DS records at GoDaddy",
+    "source": "https://www.godaddy.com/help/turn-dnssec-on-or-off-6420",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "account_security": {
+    "value": "2-step verification via SMS or authenticator app; domain lock toggle (60-day lock after registration or transfer); paid Domain Ownership Protection requires 2SV for transfers, DNS and contact changes",
+    "source": "https://www.godaddy.com/help/unlock-or-lock-my-domain-410",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "bulk_reseller": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "other_notes": {
+    "value": "Current developer docs state access by operation type, not by domain count. Secondary sources (forum posts, support quotes) report earlier thresholds: 50+ domains for availability, 10+ domains or Discount Domain Club for management/DNS, and a US$20 monthly spend on the Canadian help page.",
+    "source": "https://www.godaddy.com/en-ca/help/how-do-i-access-domain-related-apis-42424",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "access_note": null,
+   "unverified_flags": [
+    "GoDaddy pages conflict on access thresholds (50 domains, 10 domains, US$20 spend, one active domain). Help page returned 403 to the fetcher so was not read directly; developer docs link to Rate limits page not read.",
+    "Old OTE environment not confirmed on current docs."
+   ],
+   "sources": [
+    "https://developer.godaddy.com/en/docs/api-users",
+    "https://developer.godaddy.com/getstarted",
+    "https://www.godaddy.com/",
+    "https://www.godaddy.com/en-ca/help/how-do-i-access-domain-related-apis-42424",
+    "https://www.godaddy.com/help/turn-dnssec-on-or-off-6420",
+    "https://www.godaddy.com/help/unlock-or-lock-my-domain-410"
+   ]
+  },
+  {
+   "id": "openprovider",
+   "tier": "extra",
+   "name": {
+    "value": "Openprovider",
+    "source": "https://www.openprovider.com/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "homepage": {
+    "value": "https://www.openprovider.com/",
+    "source": "https://www.openprovider.com/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "api": {
+    "exists": {
+     "value": "yes",
+     "source": "https://docs.openprovider.com/",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "docs_url": {
+     "value": "https://developer.openprovider.com/",
+     "source": "https://developer.openprovider.com/",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "auth_style": {
+     "value": "Bearer token from POST https://api.openprovider.eu/v1/auth/login",
+     "source": "https://developer.openprovider.com/",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "sandbox": {
+     "value": "yes: separate sandbox with own accounts, no billing or registry submission; sign-up cp.sandbox.openprovider.nl",
+     "source": "https://developer.openprovider.com/",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "capabilities": {
+     "can_register": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_transfer": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_renew": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_manage_dns": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_set_nameservers": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     }
+    },
+    "other": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated"
+    }
+   },
+   "tlds": {
+    "uk": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    },
+    "eu": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    },
+    "pt": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    }
+   },
+   "pricing_model": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "prices": {
+    "com": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "uk": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "eu": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "pt": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    }
+   },
+   "price_notes": [],
+   "whois_privacy": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "dnssec": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "account_security": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "bulk_reseller": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "other_notes": {
+    "value": "Retirement notice on https://docs.openprovider.com/ (no page date): '/v1beta endpoints will be discontinued as of September 2026' and 'Existing integrations must move to /v1 before 30 June 2027, when /v1beta is switched off'. Both dates quoted verbatim; /v1 is a base URL change.",
+    "source": "https://docs.openprovider.com/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "access_note": null,
+   "unverified_flags": [
+    "Notice gives two dates (September 2026 discontinuation, 30 June 2027 switch-off) and no page date; today is 25 Nov 2026 so the September 2026 date has passed.",
+    "DNSSEC, 2FA, TLD support and reseller programme not sourced."
+   ],
+   "sources": [
+    "https://developer.openprovider.com/",
+    "https://docs.openprovider.com/",
+    "https://www.openprovider.com/"
+   ]
+  },
+  {
+   "id": "centralnicreseller",
+   "tier": "extra",
+   "name": {
+    "value": "CentralNic Reseller (Hexonet)",
+    "source": "https://www.centralnicreseller.com/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "homepage": {
+    "value": "https://www.centralnicreseller.com/",
+    "source": "https://www.centralnicreseller.com/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "api": {
+    "exists": {
+     "value": "yes",
+     "source": "https://www.centralnicreseller.com/rest-api/",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "docs_url": {
+     "value": "https://www.centralnicreseller.com/rest-api/",
+     "source": "https://www.centralnicreseller.com/rest-api/",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "auth_style": {
+     "value": "HTTP Basic or JWT bearer over HTTPS",
+     "source": "https://www.centralnicreseller.com/rest-api/",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "sandbox": {
+     "value": "yes: OT&E sandbox",
+     "source": "https://www.centralnicreseller.com/rest-api/",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "capabilities": {
+     "can_register": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_transfer": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_renew": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_manage_dns": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_set_nameservers": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     }
+    },
+    "other": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated"
+    }
+   },
+   "tlds": {
+    "uk": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    },
+    "eu": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    },
+    "pt": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    }
+   },
+   "pricing_model": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "prices": {
+    "com": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "uk": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "eu": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "pt": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    }
+   },
+   "price_notes": [],
+   "whois_privacy": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "dnssec": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "account_security": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "bulk_reseller": {
+    "value": "Reseller programme, white-label storefront, 1,900+ TLDs and SLDs",
+    "source": "https://www.centralnicreseller.com/rest-api/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "other_notes": {
+    "value": "Creating a reseller account gives access to API, docs and OT&E; no other eligibility stated",
+    "source": "https://www.centralnicreseller.com/rest-api/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "access_note": null,
+   "unverified_flags": [
+    "Hexonet is now branded CentralNic Reseller; the legacy Hexonet API may differ from the REST API read."
+   ],
+   "sources": [
+    "https://www.centralnicreseller.com/",
+    "https://www.centralnicreseller.com/rest-api/"
+   ]
+  },
+  {
+   "id": "namesilo",
+   "tier": "extra",
+   "name": {
+    "value": "NameSilo",
+    "source": "https://www.namesilo.com/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "homepage": {
+    "value": "https://www.namesilo.com/",
+    "source": "https://www.namesilo.com/",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "api": {
+    "exists": {
+     "value": "yes",
+     "source": "https://www.namesilo.com/api-reference",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "docs_url": {
+     "value": "https://www.namesilo.com/api-reference",
+     "source": "https://www.namesilo.com/api-reference",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "auth_style": {
+     "value": "API key in `key` query parameter over HTTPS GET",
+     "source": "https://www.namesilo.com/api-reference",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "sandbox": {
+     "value": "yes, on request: contact NameSilo for sandbox credentials",
+     "source": "https://www.namesilo.com/api-reference",
+     "checked": "2026-11-25",
+     "note": null
+    },
+    "capabilities": {
+     "can_register": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_transfer": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_renew": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_manage_dns": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     },
+     "can_set_nameservers": {
+      "value": null,
+      "source": null,
+      "checked": null,
+      "note": "not stated"
+     }
+    },
+    "other": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated"
+    }
+   },
+   "tlds": {
+    "uk": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    },
+    "eu": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    },
+    "pt": {
+     "value": null,
+     "source": null,
+     "checked": null,
+     "note": "not stated on the pages read",
+     "notes": null
+    }
+   },
+   "pricing_model": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "prices": {
+    "com": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "uk": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "eu": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    },
+    "pt": {
+     "first_year": null,
+     "renewal": null,
+     "transfer": null,
+     "currency": null,
+     "tax_inclusive": null,
+     "reading": null,
+     "source": null,
+     "checked": null,
+     "note": "not listed on the pages read"
+    }
+   },
+   "price_notes": [],
+   "whois_privacy": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "dnssec": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "account_security": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "bulk_reseller": {
+    "value": null,
+    "source": null,
+    "checked": null,
+    "note": "not stated"
+   },
+   "other_notes": {
+    "value": "Some operations change settings without the web interface's error checking.",
+    "source": "https://www.namesilo.com/api-reference",
+    "checked": "2026-11-25",
+    "note": null
+   },
+   "access_note": null,
+   "unverified_flags": [
+    "DNSSEC, 2FA, TLDs not sourced in second pass (not in priority list)."
+   ],
+   "sources": [
+    "https://www.namesilo.com/",
+    "https://www.namesilo.com/api-reference"
+   ]
+  }
+ ]
+}

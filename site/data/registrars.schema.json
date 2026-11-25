@@ -1,0 +1,266 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://domain-registrars.services.sovereignweb.site/data/registrars.schema.json",
+ "title": "Registrars comparison",
+ "type": "object",
+ "required": [
+  "schema_version",
+  "checked",
+  "registrars"
+ ],
+ "properties": {
+  "schema_version": {
+   "const": 1
+  },
+  "title": {
+   "type": "string"
+  },
+  "checked": {
+   "type": "string",
+   "format": "date"
+  },
+  "keeper": {
+   "type": "string"
+  },
+  "about": {
+   "type": "string"
+  },
+  "registrars": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/registrar"
+   }
+  }
+ },
+ "$defs": {
+  "claim": {
+   "type": "object",
+   "description": "One datum. value null means not stated: it could not be sourced from the vendor's own public pages.",
+   "required": [
+    "value",
+    "source",
+    "checked",
+    "note"
+   ],
+   "properties": {
+    "value": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "source": {
+     "type": [
+      "string",
+      "null"
+     ],
+     "format": "uri"
+    },
+    "checked": {
+     "type": [
+      "string",
+      "null"
+     ],
+     "format": "date"
+    },
+    "note": {
+     "type": [
+      "string",
+      "null"
+     ]
+    }
+   }
+  },
+  "price": {
+   "type": "object",
+   "description": "Strings exactly as the vendor displayed them on the checked date, in the vendor's currency. Never converted.",
+   "properties": {
+    "first_year": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "renewal": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "transfer": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "currency": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "tax_inclusive": {
+     "type": [
+      "boolean",
+      "string",
+      "null"
+     ]
+    },
+    "reading": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "source": {
+     "type": [
+      "string",
+      "null"
+     ],
+     "format": "uri"
+    },
+    "checked": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "note": {
+     "type": [
+      "string",
+      "null"
+     ]
+    }
+   }
+  },
+  "registrar": {
+   "type": "object",
+   "required": [
+    "id",
+    "tier",
+    "name",
+    "api",
+    "tlds",
+    "prices"
+   ],
+   "properties": {
+    "id": {
+     "type": "string"
+    },
+    "tier": {
+     "enum": [
+      "core",
+      "extra"
+     ]
+    },
+    "name": {
+     "$ref": "#/$defs/claim"
+    },
+    "homepage": {
+     "$ref": "#/$defs/claim"
+    },
+    "api": {
+     "type": "object",
+     "properties": {
+      "exists": {
+       "$ref": "#/$defs/claim"
+      },
+      "docs_url": {
+       "$ref": "#/$defs/claim"
+      },
+      "auth_style": {
+       "$ref": "#/$defs/claim"
+      },
+      "sandbox": {
+       "$ref": "#/$defs/claim"
+      },
+      "capabilities": {
+       "type": "object",
+       "additionalProperties": {
+        "$ref": "#/$defs/claim"
+       }
+      },
+      "other": {
+       "$ref": "#/$defs/claim"
+      }
+     }
+    },
+    "tlds": {
+     "type": "object",
+     "properties": {
+      "uk": {
+       "$ref": "#/$defs/claim"
+      },
+      "eu": {
+       "$ref": "#/$defs/claim"
+      },
+      "pt": {
+       "$ref": "#/$defs/claim"
+      }
+     }
+    },
+    "pricing_model": {
+     "$ref": "#/$defs/claim"
+    },
+    "prices": {
+     "type": "object",
+     "properties": {
+      "com": {
+       "$ref": "#/$defs/price"
+      },
+      "uk": {
+       "$ref": "#/$defs/price"
+      },
+      "eu": {
+       "$ref": "#/$defs/price"
+      },
+      "pt": {
+       "$ref": "#/$defs/price"
+      }
+     }
+    },
+    "price_notes": {
+     "type": "array",
+     "items": {
+      "$ref": "#/$defs/claim"
+     }
+    },
+    "whois_privacy": {
+     "$ref": "#/$defs/claim"
+    },
+    "dnssec": {
+     "$ref": "#/$defs/claim"
+    },
+    "account_security": {
+     "$ref": "#/$defs/claim"
+    },
+    "bulk_reseller": {
+     "$ref": "#/$defs/claim"
+    },
+    "other_notes": {
+     "$ref": "#/$defs/claim"
+    },
+    "access_note": {
+     "oneOf": [
+      {
+       "$ref": "#/$defs/claim"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "unverified_flags": {
+     "type": "array"
+    },
+    "sources": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "format": "uri"
+     }
+    }
+   }
+  }
+ }
+}
