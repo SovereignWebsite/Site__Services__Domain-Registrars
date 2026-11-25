@@ -42,7 +42,7 @@ def home(base):
     return f'''{h1('Registering domains: how it works, and who has an API')}
 {lead('A researched guide for anyone registering domains on behalf of customers: how the system fits together, whether you can buy direct, what to do when a name is taken, and which registrars offer an API. Every claim has its source and the date it was checked.')}
 <ul class="cards">{cs}</ul>
-<section aria-labelledby="short"><h2 id="short">Short answers</h2>
+<section class="shorts" aria-labelledby="short"><h2 id="short">Short answers</h2>
 <dl class="short">
 <dt>Can you buy a domain straight from the registry?</dt>
 <dd>The sources show registries working through accredited registrars: ICANN describes one registry in charge of each top-level domain, with registrars paying it a per-domain fee and free to charge what they wish. Verisign says it manages relationships with about 3,000 accredited registrars. For .uk, Nominet requires every registrar to be a member. Whether a registry also sells to the public is <strong>not stated</strong> on the pages we could read for Nominet, EURid and .PT. {cite('icann_what','verisign_registry','nominet_faq')}</dd>

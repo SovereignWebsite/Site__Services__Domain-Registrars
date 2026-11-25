@@ -27,3 +27,4 @@ body.theme-d5 main>p,body.theme-d5 main>ul:not(.cards),body.theme-d5 main>ol,bod
 }
 body.theme-d5 main>.banner{order:-1;max-width:none}
 @media (max-width:48rem){body.theme-d5 .lead{font-size:1rem}body.theme-d5 main>.mark{display:none}}
+@media (max-width:48rem){body.theme-d5 header.top{padding-top:2.6rem}}

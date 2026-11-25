@@ -37,7 +37,7 @@ def pages_for(base, theme):
     banner = ''
     if base:
         d = DESIGNS[base.split('/')[-1]]
-        banner = f'<p class="banner"><strong>Design preview {esc(d["key"])}: {esc(d["name"])}.</strong> The live pages use {esc(DESIGNS[live]["key"])}. <a href="/designs/">Back to the picker</a>.</p>\n'
+        banner = f'<p class="banner"><strong>Design preview {esc(d["key"])}: {esc(d["name"])}.</strong> <span class="bn-long">The live pages use {esc(DESIGNS[live]["key"])}. </span><a href="/designs/">Back to the picker</a>.</p>\n'
     bodies = {'/': C.home(base), '/how-it-works/': C.how(), '/buy-direct/': C.buy(), '/aftermarket/': C.after(),
               '/transfers/': C.transfers(), '/registrars/': R.registrars_page(base), '/choosing/': C.choosing()}
     # links in prose point at the live paths; inside a preview, keep readers inside it

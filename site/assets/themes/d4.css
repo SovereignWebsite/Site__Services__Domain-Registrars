@@ -18,3 +18,12 @@ body.theme-d4 .scroll{border-color:var(--line);background:rgba(255,255,255,.18)}
  body.theme-d4 .src::before{content:"Note on the source. ";font-weight:700;color:var(--accent)}
  body.theme-d4 td .src,body.theme-d4 li .src{margin-left:0}
 }
+@media (max-width:79.99rem){
+ /* Field Notes leads with a claim and its source, not a menu of cards */
+ body.theme-d4 main{display:flex;flex-direction:column}
+ body.theme-d4 main>*{order:5}
+ body.theme-d4 main>.mark,body.theme-d4 main>h1,body.theme-d4 main>.lead,body.theme-d4 main>.banner{order:0}
+ body.theme-d4 main>section.shorts{order:1}
+ body.theme-d4 main>ul.cards{order:2}
+ body.theme-d4 .lead{font-size:1rem}
+}

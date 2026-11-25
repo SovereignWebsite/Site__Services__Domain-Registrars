@@ -106,3 +106,4 @@ details.readme{margin:.6rem 0;padding:.5rem .8rem;border:1px solid var(--line);b
 main a,main li,main td,main th,main p,main dd,main summary,main h1,main h2{overflow-wrap:anywhere}
 .scroll table.kv{table-layout:auto;width:100%}
 main{min-width:0}.wrap{min-width:0}
+@media (max-width:48rem){.bn-long{display:none}.banner{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
