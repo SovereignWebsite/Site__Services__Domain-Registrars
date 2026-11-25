@@ -1,0 +1,8 @@
+{
+ "agent": "domain-registrars.a@SovereignWebsite.dinis",
+ "status": "active",
+ "session": "https://claude.ai/code/session_018yvwtQDzwZJMsPiQ4p9rSh",
+ "bundle": {
+  "sign": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE6iFO1sNyR19A567jOdyt5tQOy3eR\nesPPuIU9qlgZXAcm8FlT6Uu2NLrGWQ2kgIHrlvvuIx8PgGYoG1OuUhodWA==\n-----END PUBLIC KEY-----\n"
+ }
+}
