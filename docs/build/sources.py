@@ -44,3 +44,4 @@ src('alibaba_broker', 'https://www.alibabacloud.com/help/en/dws/user-guide/purch
 src('ncsc_protect', 'https://www.ncsc.gov.uk/collection/using-online-services-safely/protecting-your-public-domain-name', 'UK NCSC, protecting your public domain name')
 src('ncsc_ch', 'https://www.ncsc.admin.ch/ncsc/en/home/aktuell/im-fokus/2024/wochenrueckblick_21.html', 'Swiss NCSC, weekly review 21 (2024)', 'summary')
 src('lookup_icann', 'https://lookup.icann.org/', 'ICANN Lookup')
+src('nominet_ns', 'https://registrars.nominet.uk/uk-namespace/', 'Nominet, .uk namespace (registrar site)')

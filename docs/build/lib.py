@@ -35,7 +35,7 @@ def cite(*keys):
     out = []
     for k in keys:
         USED.add(k); s = SOURCES[k]
-        tag = ' <span class="flag">(search summary only)</span>' if s['how'] == 'summary' else ''
+        tag = ' <span class="flag badge">Not read on the official page: from a search summary</span>' if s['how'] == 'summary' else ''
         out.append((f'<a href="{esc(s["url"])}">{esc(s["title"])}</a>' if s['url'] not in BAD else f'{esc(s["title"])} (address no longer resolves, 404 on {CHECKED})') + tag)
     return f'<span class="src">Source: {"; ".join(out)}. Checked {CHECKED}.</span>'
 

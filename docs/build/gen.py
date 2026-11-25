@@ -85,7 +85,7 @@ def data_page(base, theme, banner):
 <ul>
 <li>Top level: <code>schema_version</code>, <code>title</code>, <code>checked</code>, <code>about</code> and <code>registrars</code> (a list).</li>
 <li>Every datum is a <strong>claim</strong>: <code>value</code> (text as the vendor showed it, or <code>null</code>), <code>source</code> (the vendor page it came from), <code>checked</code> (date) and <code>note</code>. A <code>null</code> value means <em>not stated</em>: it could not be sourced from the vendor's own public pages.</li>
-<li>Per registrar: <code>id</code>, <code>tier</code> (<code>core</code> or <code>extra</code>), <code>name</code>, <code>homepage</code>, <code>api</code> (<code>exists</code>, <code>docs_url</code>, <code>auth_style</code>, <code>sandbox</code>, <code>capabilities</code>, <code>other</code>), <code>tlds</code> (<code>uk</code>, <code>eu</code>, <code>pt</code>), <code>pricing_model</code>, <code>prices</code> (<code>com</code>, <code>uk</code>, <code>eu</code>, <code>pt</code>), <code>whois_privacy</code>, <code>dnssec</code>, <code>account_security</code>, <code>bulk_reseller</code>, <code>other_notes</code>, <code>unverified_flags</code> and <code>sources</code>.</li>
+<li>Per registrar: <code>id</code>, <code>tier</code> (<code>core</code> or <code>extra</code>), <code>name</code>, <code>homepage</code>, <code>api</code> (<code>exists</code>, <code>docs_url</code>, <code>auth_style</code>, <code>sandbox</code>, <code>capabilities</code>, <code>other</code>), <code>tlds</code> (<code>uk</code>, <code>eu</code>, <code>pt</code>), <code>pricing_model</code>, <code>prices</code> (<code>com</code>, <code>uk</code>, <code>eu</code>, <code>pt</code>), <code>whois_privacy</code>, <code>dnssec</code>, <code>account_security</code>, <code>bulk_reseller</code>, <code>other_notes</code>, <code>read_quality</code> (only where some fields came from search summaries: it lists them, and the site badges those cells), <code>unverified_flags</code> and <code>sources</code>.</li>
 <li>A price has <code>first_year</code>, <code>renewal</code>, <code>transfer</code> (strings as displayed), <code>currency</code>, <code>tax_inclusive</code> (true, false or null), <code>reading</code> (how to read it), <code>source</code> and <code>checked</code>. Prices are never converted or rounded, and may be promotional.</li>
 </ul>
 <h2>Rules</h2>
@@ -115,6 +115,7 @@ SCHEMA = {
       "price_notes": {"type": "array", "items": {"$ref": "#/$defs/claim"}},
       "whois_privacy": {"$ref": "#/$defs/claim"}, "dnssec": {"$ref": "#/$defs/claim"}, "account_security": {"$ref": "#/$defs/claim"},
       "bulk_reseller": {"$ref": "#/$defs/claim"}, "other_notes": {"$ref": "#/$defs/claim"}, "access_note": {"oneOf": [{"$ref": "#/$defs/claim"}, {"type": "null"}]},
+      "read_quality": {"type": "object", "description": "Present when some fields came from search-result summaries rather than the official page itself. summary_only_fields lists them (* means all).", "properties": {"summary_only_fields": {"type": "array", "items": {"type": "string"}}, "note": {"type": "string"}}},
       "unverified_flags": {"type": "array"}, "sources": {"type": "array", "items": {"type": "string", "format": "uri"}}}}}}
 
 DATA_COUNT = len(C.REGS)

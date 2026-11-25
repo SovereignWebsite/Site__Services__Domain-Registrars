@@ -250,6 +250,21 @@
       }
      ]
     },
+    "read_quality": {
+     "type": "object",
+     "description": "Present when some fields came from search-result summaries rather than the official page itself. summary_only_fields lists them (* means all).",
+     "properties": {
+      "summary_only_fields": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "note": {
+       "type": "string"
+      }
+     }
+    },
     "unverified_flags": {
      "type": "array"
     },

@@ -281,8 +281,8 @@
      }
     },
     "other": {
-     "value": "Also: GetDomainPrices, ListPrices, GetDomainSuggestions, UpdateDomainContact, UpdateDomainContactPrivacy, Enable/DisableDomainTransferLock, Associate/DisassociateDelegationSignerToDomain (DNSSEC), RestoreDomain, DeleteDomain.",
-     "source": "same",
+     "value": "The ListPrices API action returns registration, renewal, transfer, change-of-owner and restoration prices per TLD (standard rates, not premium). Calling it needs an AWS account, so it was not called here.",
+     "source": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_ListPrices.html",
      "checked": "2026-11-25",
      "note": null
     }
@@ -363,6 +363,12 @@
     }
    },
    "price_notes": [
+    {
+     "value": "AWS publishes no per-TLD prices on the pricing page: it says prices vary by TLD and are per domain per year, and links a PDF price list whose filename suggests a 2014 date (not read). Treat any price from that PDF as possibly out of date.",
+     "source": "https://aws.amazon.com/route53/pricing/",
+     "checked": "2026-11-25",
+     "note": null
+    },
     {
      "value": "Annual increments, per domain per year. No volume discounts. Promotional credits cannot be used for domain fees. Registrations and renewals are non-refundable.",
      "source": "https://aws.amazon.com/route53/pricing/",
@@ -833,7 +839,14 @@
     "https://porkbun.com/products/domains",
     "https://porkbun.com/security",
     "https://porkbun.com/tld/pt"
-   ]
+   ],
+   "read_quality": {
+    "summary_only_fields": [
+     "tlds.uk",
+     "dnssec"
+    ],
+    "note": "The .uk terms and the DNSSEC steps come from search summaries rather than full page reads."
+   }
   },
   {
    "id": "namecheap",
@@ -1048,7 +1061,13 @@
     "https://www.namecheap.com/support/knowledgebase/article.aspx/754/63/do-you-have-a-domain-reseller-program/",
     "https://www.namecheap.com/support/knowledgebase/article.aspx/763/63/what-is-sandbox/",
     "https://www.namecheap.com/support/knowledgebase/article.aspx/9253/45/how-can-i-enabledisable-twofactor-authentication/"
-   ]
+   ],
+   "read_quality": {
+    "summary_only_fields": [
+     "*"
+    ],
+    "note": "namecheap.com returned 403 to our fetcher; every fact comes from search-result summaries of its official pages. Re-check by hand."
+   }
   },
   {
    "id": "ovhcloud",
@@ -1846,7 +1865,14 @@
     "https://www.networksolutions.com/blog/what-is-dnssec/",
     "https://www.networksolutions.com/help/article/different-types-of-domain-locks",
     "https://www.networksolutions.com/partners/wholesale/index.jsp"
-   ]
+   ],
+   "read_quality": {
+    "summary_only_fields": [
+     "dnssec",
+     "account_security"
+    ],
+    "note": "DNSSEC and account security come from a blog post and a help article seen through search summaries."
+   }
   },
   {
    "id": "dynadot",

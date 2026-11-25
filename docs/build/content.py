@@ -72,7 +72,9 @@ def matrix_table(core_only=False, base=''):
     rows = []
     for r in REGS:
         if core_only and r['tier'] != 'core': continue
-        rows.append([td(f'<a href="{base}/registrars/{r["id"]}/">{esc(r["name"]["value"])}</a>', True),
+        rq = r.get('read_quality')
+        mk = (' <span class="badge">' + ('Not read on the official page: from a search summary' if '*' in rq['summary_only_fields'] else 'Partly from a search summary') + '</span>') if rq else ''
+        rows.append([td(f'<a href="{base}/registrars/{r["id"]}/">{esc(r["name"]["value"])}</a>{mk}', True),
                      td(lead_word(r['api']['exists'])), td(lead_word(r['api']['sandbox'])),
                      td(lead_word(r['tlds']['uk'])), td(lead_word(r['tlds']['eu'])), td(lead_word(r['tlds']['pt']))])
     return table('API, sandbox and .uk, .eu, .pt support, from each vendor\'s own pages', ['Registrar', 'API', 'Sandbox', '.uk', '.eu', '.pt'], rows, 'Comparison at a glance')
@@ -121,7 +123,7 @@ def buy():
       td(f'The registry (Verisign for .com) lists "Become a Registrar" and "Find a Registrar" and serves about 3,000 accredited registrars. An explicit "we do not sell to the public" statement: not stated. {cite("verisign_registry")}'),
       td(f'Application fee $3,500, non-refundable. Accreditation fee $4,000 a year. Transaction fee $0.20 per domain-year, billed quarterly, plus a variable fee shared among registrars. "Adequate working capital": $70,000 or more in liquid capital is deemed adequate for initial accreditation. Insurance: not stated on that page. Then a registry contract and technical tests: per a Verisign page seen only in a search summary, the Operational Test and Evaluation environment. {cite("icann_fin","icann_regs_old","verisign_become")}')],
      [td('Nominet (.uk)', True),
-      td(f'Nominet\'s consumer pages returned errors to us, so its own statement on direct sales is <strong>not stated</strong>. Its fee schedule is registrar-facing, with member and non-member rates. {cite("nominet_fees")}'),
+      td(f'<strong>Not stated.</strong> Nominet\'s registry page describes its registry-registrar agreement as "the contract between Nominet and a registrar" and links to how to become a registrar and sell .uk. Nothing on it says the public can buy .uk directly from Nominet. Its fee schedule is registrar-facing, with member and non-member rates. Nominet\'s consumer pages returned 403 to us. {cite("nominet_ns","nominet_fees")}'),
       td(f'Membership is required: "all .UK Registrars must be members of Nominet" (with a small exception for .sch.uk-only managers). Joining fee £400, annual subscription £100. Tag types (Accredited Channel Partner, Channel Partner, Self-Managed) are described only in a search summary. {cite("nominet_faq","nominet_fees","nominet_tags")}')],
      [td('EURid (.eu)', True),
       td(f'The become-a-registrar page does not say whether EURid sells direct; its fee schedule applies only to accredited registrars. <strong>Not stated.</strong> {cite("eurid_become")}'),

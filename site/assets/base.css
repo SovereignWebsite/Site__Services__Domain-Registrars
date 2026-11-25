@@ -78,3 +78,4 @@ details{margin:.2rem 0}summary{cursor:pointer;color:var(--link)}details p{margin
 @media print{.family-credit,.main-nav,.skip{display:none}}
 @media (max-width:599px){.foot,.family-credit,.site-links,.small,.src{font-size:15px}table{font-size:.85rem}}
 table.kv td{min-width:0;overflow-wrap:anywhere}
+.badge{display:inline-block;margin:.15rem 0;padding:0 .45rem;border:1px solid var(--part-fg);border-radius:4px;background:var(--part-bg);color:var(--part-fg);font-size:.72rem;font-weight:700;line-height:1.5}
