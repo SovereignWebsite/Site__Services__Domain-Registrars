@@ -61,6 +61,13 @@ def cell_claim(c, n=110, link=True):
         return f'<details><summary>{s}</summary><p>{full}</p>{srcl}</details>'
     return f'{s}{srcl}'
 
+import hashlib, os
+_SITE = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'site'))
+def css_v(rel):
+    """Content hash of a stylesheet, so a browser that cached an older copy at the same address fetches the new one."""
+    try: return hashlib.sha256(open(os.path.join(_SITE, rel.lstrip('/')), 'rb').read()).hexdigest()[:10]
+    except OSError: return '0'
+
 def head(title, desc, path, base, theme, noindex=False):
     full = f'{title}: {SITE_NAME}' if path != '/' else title
     url = LIVE + path
@@ -88,8 +95,8 @@ def head(title, desc, path, base, theme, noindex=False):
 <meta name="twitter:description" content="{esc(desc)}">
 <meta name="twitter:image" content="{CARD}">
 <link rel="canonical" href="{esc(url)}">
-<link rel="stylesheet" href="/assets/base.css">
-<link rel="stylesheet" href="/assets/themes/{theme}.css">
+<link rel="stylesheet" href="/assets/base.css?v={css_v("/assets/base.css")}">
+<link rel="stylesheet" href="/assets/themes/{theme}.css?v={css_v("/assets/themes/" + theme + ".css")}">
 </head>
 '''
 

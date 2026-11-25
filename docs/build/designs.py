@@ -28,7 +28,7 @@ ROUNDS = [
 ]
 
 def picker_body(live):
-    items = ''.join(f'<li><a href="/designs/{k}/"><img src="/assets/designs/thumbs/{k}.jpg" width="640" height="400" alt="Thumbnail of design {k}, {esc(d["name"])}: the home page">'
+    items = ''.join(f'<li><a href="/designs/{k}/"><img src="/assets/designs/thumbs/{k}.jpg" width="320" height="200" alt="Thumbnail of design {k}, {esc(d["name"])}: the home page">'
                     f'<span class="dt">{k}: {esc(d["name"])}{"<span class=rec>live, recommended</span>" if k == live else ""}</span><span class="dd">{esc(d["line"])} {esc(d["who"])}</span></a></li>' for k, d in DESIGNS.items())
     rounds = ''.join(f'<h3>{esc(h)}</h3>' + ''.join(f'<p>{p}</p>' for p in ps) for h, ps in ROUNDS)
     return f'''<div class="mark">Design</div><h1>Choose a design</h1>
